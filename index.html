@@ -24,17 +24,21 @@
             --nav-link-hover: rgb(0, 0, 0);
         }
      
-        .hero-sec{
-            /* Use min-height so the section can shrink/grow without revealing background tiles */
-          
-          min-height: 84vh;
-             width: 100%;
-           background-image: url('section.webp');
-  background-size: contain;
+       .hero-sec {
+  background-image: url('section.webp');
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-            
-        }
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  .hero-sec{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
         /* Hero text block positioned mid-left */
         .hero-content{
             position: relative;
@@ -419,6 +423,7 @@
     </script>
 </body>
 </html>
+
 
 
 
