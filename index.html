@@ -23,137 +23,20 @@
             --nav-link-color: rgb(66, 62, 62);
             --nav-link-hover: rgb(0, 0, 0);
         }
-        nav.site-nav{
-            position: fixed;
-            inset: 0 auto auto 0; /* top:0, left:0 */
-            width: 100%;
-            height: var(--nav-height);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 var(--nav-padding);
-            box-sizing: border-box;
-            background: transparent; /* keep fully transparent by default */
-            z-index: 1000;
-        }
-        /* semi-transparent backdrop for better contrast when needed */
-        nav.site-nav .nav-inner{
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-            margin-right: 100px;
-        }
-        .brand{
-            color: var(--nav-link-color);
-            font-weight: 600;
-            letter-spacing: 0.2px;
-            text-decoration: none;
-        }
-        .nav-links{
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-        .nav-links a{
-            color: var(--nav-link-color);
-            text-decoration: none;
-            padding: 0.35rem 0.5rem;
-            transition: color 150ms ease, opacity 150ms ease;
-            font-weight: 600;
-            font-size: larger;
-        }
-        .nav-links a:hover,
-        .nav-links a:focus{
-            color: var(--nav-link-hover);
-            outline: none;
-        }
-
-        /* Mobile: hamburger */
-        .nav-toggle{
-            display: none;
-            background: none;
-            border: none;
-            color: var(--nav-link-color);
-            font-size: 1.25rem;
-            cursor: pointer;
-        }
-
-        /* Responsive behavior */
-        @media (max-width: 768px){
-            .nav-links{
-                position: absolute;
-                top: var(--nav-height);
-                right: 0;
-                background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.6));
-                backdrop-filter: blur(6px);
-                -webkit-backdrop-filter: blur(6px);
-                padding: 0.75rem 1rem;
-                flex-direction: column;
-                gap: 0.5rem;
-                width: calc(100% - 2rem);
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 260ms ease;
-                margin: 0 1rem;
-                border-radius: 8px;
-            }
-            .nav-links.open{
-                max-height: 240px; /* large enough for 4 links */
-            }
-            .nav-toggle{ display: inline-flex; align-items: center; gap: .5rem; }
-        }
+     
         .hero-sec{
             /* Use min-height so the section can shrink/grow without revealing background tiles */
             min-height: 84vh;
             width: 100%;
             margin: 0;
             /* Prevent the background from repeating and ensure it scales/positions nicely */
-            background-image: url('section.webp');
+            background-image: url("images/bgsection.png");
             background-repeat: no-repeat;
             background-size: cover; /* or 'contain' depending on desired result */
             background-position: center center;
             background-attachment: scroll; /* avoid fixed which can create artifacts on zoom */
         }
-        /* Hero text block positioned mid-left */
-        .hero-content{
-            position: relative;
-            height: 100%;
-            width: 100%;
-        }
-        .hero-card{
-            position: absolute;
-            left: 6%;
-            top: 50%;
-            transform: translateY(80%);
-            max-width: 560px;
-            color: rgb(34,34,34);
-            background: rgba(255,255,255,0.0);
-            padding: 0.25rem 0.5rem;
-        }
-        .hero-eyebrow{
-            font-size: 1.4rem;
-            color: rgba(34,34,34,0.75);
-            margin-bottom: 0.6rem;
-            letter-spacing: 0.2px;
-        }
-        .hero-title{
-            font-family: 'Playfair Display', 'Courier New', Courier, monospace;
-            font-size: clamp(3rem, 7.5vw, 5rem);
-            line-height: 0.98;
-            margin: 0 0 0.6rem 0;
-            color: rgb(34,34,34);
-            font-weight: 800;
-            letter-spacing: 0.2px;
-            word-break: keep-all;
-        }
-        .hero-desc{
-            font-size: clamp(0.95rem, 1.6vw, 1.15rem);
-            color: rgba(34,34,34,0.8);
-            margin: 0;
-            max-width: 480px;
-        }
+       
 
         /* Responsive adjustments */
         @media (max-width: 900px){
@@ -341,29 +224,57 @@
         nav.site-nav .brand, nav.site-nav .nav-links a{ transition: color 260ms ease; }
         nav.site-nav.scrolled .brand, nav.site-nav.scrolled .nav-links a{ color: #302d2d !important; }
     
+        .nav-link{
+            font-size: 1.1rem;
+        }
+        .dropdown-menu .dropdown-item{
+            color: white;
+        }
+         .dropdown-menu .dropdown-item:hover{
+            color: black;
+        }
+
+        .dropdown-toggle{
+           transition:  1.2ms ease;
+        }
     </style>
 </head>
 <body>
-    <nav class="site-nav" aria-label="Main navigation">
-        <div class="nav-inner">
-            <a href="#" class="brand">European Doors</a>
-            <button class="nav-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle menu">☰</button>
-            <div id="nav-links" class="nav-links" role="navigation">
-                <a href="index.html">Home</a>
-                <a href="#products">Products</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-    </nav>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">European Doors</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto me-2">
+        <li class="nav-item px-2">
+          <a class="nav-link" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown px-2">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Products
+          </a>
+          <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something </a></li>
+          </ul>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link" href="#">About</a>
+        </li>
+
+        <li class="nav-item px-2">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
     <section class="hero-sec">
-        <div class="hero-content">
-            <div class="hero-card" role="region" aria-label="Hero">
-                <div class="hero-eyebrow">Discover the Beauty of Sustainable Woodwork</div>
-                <h1 class="hero-title">Elevating<br/>Architectural</h1>
-                <p class="hero-desc">Crafting Timeless Elegance: Explore Our Custom Wooden Doors, Window Frames</p>
-            </div>
-        </div>
+        
     </section>
     <br><br><br>
 
@@ -383,7 +294,7 @@
         <a href="#contact" class="btn btn-primary">Contact Us</a>
     </div>
     <div class="col-lg-6 first-right door-img">
-        <img src="door_image.htm" alt="Wooden bedroom with large window">
+        <img src="images/door_image.htm" alt="Wooden bedroom with large window">
     </div>
 
     </div>
@@ -476,4 +387,3 @@
     </script>
 </body>
 </html>
-
