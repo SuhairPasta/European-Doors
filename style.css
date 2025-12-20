@@ -309,12 +309,28 @@
             font-size: 1.6rem;
             margin: 0 0 0.5rem 0;
         }
-        .services-grid{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.25rem;
-            align-items: start;
-        }
+      /* Update services grid for 4 cards */
+.services-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Changed to 4 */
+    gap: 1.25rem;
+    align-items: start;
+}
+
+@media (max-width: 1200px){
+    .services-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px){
+    .services-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px){
+    .services-grid{ grid-template-columns: 1fr; }
+}
+
+/* Remove the old h3 margin if using section-heading */
+.services-section h3 { display: none; } /* Hide the old h3 since we use section-heading now */
         .service-card{
             padding: 0;
             border-radius: 12px;
@@ -383,3 +399,206 @@
         .nav-link{
             font-size: 1.2rem;
         }
+/* Values section styling */
+.values-section {
+    padding: 2rem 0;
+}
+
+.values-heading {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #342a26;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.value-card {
+    padding: 1.25rem;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(17,17,17,0.04);
+    text-align: center;
+    transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(17,17,17,0.12);
+}
+
+.value-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.value-card h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.05rem;
+}
+
+.value-card p {
+    margin: 0;
+    color: rgba(34,34,34,0.75);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ---------- Footer Styles ---------- */
+.site-footer {
+    background-color: #221e1c; /* Very dark warm charcoal to match site theme */
+    color: rgba(255, 255, 255, 0.75);
+    padding: 4rem 0 2rem 0;
+    margin-top: 4rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.95rem;
+}
+
+.footer-brand {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fbefe6; /* The light cream color from your first section */
+    margin-bottom: 1rem;
+}
+
+.footer-desc {
+    max-width: 320px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.5px;
+}
+
+/* Links Styling */
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.65);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: #b49b69; /* Your gold accent color */
+    transform: translateX(4px); /* Subtle slide effect */
+}
+
+/* Social Icons */
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    width: 38px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    background: #b49b69; /* Gold accent hover */
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Contact Section Styling */
+.footer-contact li {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+}
+
+.footer-contact i {
+    color: #b49b69; /* Gold icons */
+    margin-top: 3px;
+}
+
+.footer-contact a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-contact a:hover {
+    color: #fff;
+}
+
+/* Copyright Area */
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.1);
+    margin: 3rem 0 1.5rem 0;
+}
+
+.copyright-section {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.legal-link {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+
+.legal-link:hover {
+    color: #b49b69;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .site-footer {
+        text-align: center;
+    }
+    
+    .footer-desc {
+        margin: 0 auto;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-links a:hover {
+        transform: none; /* Disable slide on mobile */
+    }
+    
+    .footer-contact li {
+        justify-content: center;
+    }
+}

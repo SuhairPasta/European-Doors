@@ -8,6 +8,7 @@
     <!-- Decorative font for the big heading -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
@@ -15,8 +16,10 @@
    
 </head>
 <body>
+     
    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
+
     <a class="navbar-brand" href="#">European Doors</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -37,7 +40,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#about">About</a>
           
         </li>
 
@@ -49,7 +52,7 @@
     </div>
   </div>
 </nav>
-    <section class="hero-sec">
+ <section id="landing_page" class="hero-sec">
         <div class="hero-content">
             <div class="hero-card" role="region" aria-label="Hero">
                 <div class="hero-eyebrow">Discover the Beauty of Sustainable Woodwork</div>
@@ -61,66 +64,180 @@
     <br><br><br>
 
     <!-- About heading -->
-    <div class="container">
-        <div class="section-heading my-5" role="heading" aria-level="2">About Us</div>
-    </div>
+<div class="container">
+    <div class="section-heading my-5" role="heading" aria-level="2">About Us</div>
+</div>
 
-    
-    
-    <div class="container">
+<div class="container" id="about">
     <div class="row first-section">
-    <div class="col-lg-6 first-left">
-        <div class="eyebrow">Our Commitment</div>
-        <h2>Crafting Sustainable,<br/>Timeless</h2>
-        <p>At European Door, we believe that every project should be a masterpiece. That's why we work closely with architects, builders, and designers to deliver custom solutions.</p>
-        <a href="#contact" class="btn btn-primary">Contact Us</a>
-    </div>
-    <div class="col-lg-6 first-right door-img">
-        <img src="images/door_image.htm" alt="Wooden bedroom with large window">
+        <div class="col-lg-6 first-left">
+            <div class="eyebrow">Our Story & Commitment</div>
+            <h2>Crafting Sustainable, Timeless Woodwork</h2>
+            <p>At European Doors, we specialize in delivering high-quality, custom woodwork solutions to enhance your living spaces. Our services include custom wooden doors, wooden window and door frames, panel doors, kitchen units, wardrobes, and bespoke furniture. Founded with a passion for European-inspired craftsmanship, we blend traditional techniques with modern innovation to create pieces that are both functional and aesthetically stunning.</p>
+            <p>We believe every project is a masterpiece in the making. That's why we collaborate closely with architects, builders, designers, and homeowners to provide tailored solutions that meet your unique needs. Our dedication to sustainability ensures all materials are responsibly sourced, minimizing environmental impact while maximizing durability and elegance.</p>
+            <p>With years of expertise, our skilled artisans are committed to excellence, ensuring every detail reflects timeless quality.</p>
+            <a href="#contact" class="btn btn-primary">Contact Us</a>
+        </div>
+        <div class="col-lg-6 first-right door-img">
+            <img src="images/door_image.png" alt="Custom sustainable wooden door craftsmanship"> <!-- Replace src with a new image if desired -->
+        </div>
     </div>
 
+   <!-- Why Choose Us (expanded from Core Values) -->
+<div class="row values-section mt-5">
+    <div class="col-12">
+        <h3 class="values-heading">Why Choose Us</h3>
     </div>
+    <div class="values-grid">
+        <div class="value-card">
+            <div class="value-icon">🌿</div>
+            <h4>Sustainability</h4>
+            <p>We use responsibly sourced premium wood, prioritizing eco-friendly practices for products that last generations.</p>
+        </div>
+        <div class="value-card">
+            <div class="value-icon">🪵</div>
+            <h4>Premium Quality Materials</h4>
+            <p>Only the finest hardwoods and materials selected for durability, beauty, and superior performance.</p>
+        </div>
+        <div class="value-card">
+            <div class="value-icon">🛠️</div>
+            <h4>Master Craftsmanship</h4>
+            <p>Experienced artisans handcraft every piece with precision, blending traditional skills and modern techniques.</p>
+        </div>
+       
+        <div class="value-card">
+            <div class="value-icon">💰</div>
+            <h4>Fair & Competitive Pricing</h4>
+            <p>Transparent, value-driven quotes that deliver premium results without unnecessary markups.</p>
+        </div>
+        <div class="value-card">
+            <div class="value-icon">🚚</div>
+            <h4>On-Time Delivery</h4>
+            <p>Reliable schedules and professional delivery to keep your project moving smoothly.</p>
+        </div>
+        <div class="value-card">
+            <div class="value-icon">🤝</div>
+            <h4>Customer Satisfaction Guaranteed</h4>
+            <p>Full after-sales support, assurance, and commitment to your complete happiness with our work.</p>
+        </div>
     </div>
+</div>
+</div>
 
-   
-    <!-- Our Services -->
-    <section class="services-section" aria-labelledby="services-heading">
-        <div class="container">
-            <h3 id="services-heading" style="margin-bottom:1.25rem;">Our Services</h3>
-            <div class="services-grid">
-                <article class="service-card">
-                    <img class="service-thumb" src="images/section.webp" alt="Design" />
-                    <div class="service-body">
-                        <div class="service-icon">🎨</div>
-                        <h4>Design Consultation</h4>
-                        <p>Work with our designers to develop door solutions tailored to your project’s aesthetic and performance needs.</p>
-                        <a class="btn btn-outline-primary" href="#contact">Learn More</a>
-                    </div>
-                </article>
-                <article class="service-card">
-                    <img class="service-thumb" src="images/section.webp" alt="Custom Doors" />
-                    <div class="service-body">
-                        <div class="service-icon">🪵</div>
-                        <h4>Custom Doors</h4>
-                        <p>Bespoke wooden doors crafted from sustainably sourced materials with a variety of finishes available.</p>
-                        <a class="btn btn-outline-primary" href="#products">View Products</a>
-                    </div>
-                </article>
-                <article class="service-card">
-                    <img class="service-thumb" src="images/section.webp" alt="Installation" />
-                    <div class="service-body">
-                        <div class="service-icon">🔧</div>
-                        <h4>Installation</h4>
-                        <p>Professional installation teams ensure precise fitting and long-lasting performance for every door we deliver.</p>
-                        <a class="btn btn-outline-primary" href="#contact">Get a Quote</a>
-                    </div>
-                </article>
+   <!-- Our Services -->
+<section id="services" class="services-section" aria-labelledby="services-heading">
+    <div class="container">
+        <div class="section-heading my-5" role="heading" aria-level="2">Our Services</div>
+        <div class="services-grid">
+            <article class="service-card">
+                <img class="service-thumb" src="images/design-consultation.webp" alt="Design consultation with client and wood samples" />
+                <div class="service-body">
+                    <div class="service-icon">🎨</div>
+                    <h4>Design Consultation</h4>
+                    <p>Collaborate with our experienced designers to create tailored woodwork solutions that perfectly match your vision, style, and functional requirements.</p>
+                    <a class="btn btn-outline-primary" href="#contact">Get Started</a>
+                </div>
+            </article>
+            <article class="service-card">
+                <img class="service-thumb" src="images/custom-design.jpg" alt="Craftsman building custom wooden door in workshop" />
+                <div class="service-body">
+                    <div class="service-icon">🛠️</div>
+                    <h4>Custom Manufacturing</h4>
+                    <p>Expert craftsmanship using premium, sustainably sourced materials to fabricate high-quality custom pieces with precision and attention to detail.</p>
+                    <a class="btn btn-outline-primary" href="#contact">Request Quote</a>
+                </div>
+            </article>
+            <article class="service-card">
+                <img class="service-thumb" src="images/installation-delivery.jpg" alt="Professional installing custom wooden door" />
+                <div class="service-body">
+                    <div class="service-icon">🔧</div>
+                    <h4>Installation & Delivery</h4>
+                    <p>On-time delivery and professional installation by our skilled team, ensuring perfect fit, functionality, and lasting performance.</p>
+                    <a class="btn btn-outline-primary" href="#contact">Schedule Installation</a>
+                </div>
+            </article>
+            <article class="service-card">
+                <img class="service-thumb" src="images/after-sales.jpg" alt="Maintaining and polishing wooden door" />
+                <div class="service-body">
+                    <div class="service-icon">🛡️</div>
+                    <h4>After-Sales Service</h4>
+                    <p>Comprehensive maintenance, repairs, and support to keep your woodwork in pristine condition, backed by our satisfaction guarantee.</p>
+                    <a class="btn btn-outline-primary" href="#contact">Contact Support</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+<footer class="site-footer">
+    <div class="container">
+        <div class="row gy-5">
+            <div class="col-lg-4 col-md-6">
+                <h5 class="footer-brand">European Doors</h5>
+                <p class="footer-desc">
+                    Blending traditional European craftsmanship with modern sustainability. We create entrances that define architecture and elevate living spaces.
+                </p>
+                <div class="social-links mt-4">
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+                <h6 class="footer-heading">Company</h6>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#landing_page">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h6 class="footer-heading">Services</h6>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Custom Doors</a></li>
+                    <li><a href="#">Window Frames</a></li>
+                    <li><a href="#">Design Consultation</a></li>
+                    <li><a href="#">Restoration</a></li>
+                    <li><a href="#">Commercial Projects</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h6 class="footer-heading">Contact Us</h6>
+                <ul class="list-unstyled footer-contact">
+                    <li>
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>123 Woodwork Ave,<br>Craftsman City, EU 54000</span>
+                    </li>
+                    <li>
+                        <i class="bi bi-envelope-fill"></i>
+                        <a href="mailto:info@europeandoors.com">info@europeandoors.com</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-telephone-fill"></i>
+                        <a href="tel:+923219295562">+92 (321) 929-5562</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </section>
-    <br><br><br>
 
+        <hr class="footer-divider">
 
+        <div class="row align-items-center copyright-section">
+            <div class="col-md-6 text-center text-md-start">
+                <p class="mb-0">&copy; 2024 European Doors. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <a href="#" class="legal-link">Privacy Policy</a>
+                <span class="mx-2">•</span>
+                <a href="#" class="legal-link">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
 
  <script src="script.js"></script>
 </body>
