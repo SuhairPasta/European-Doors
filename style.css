@@ -3,14 +3,109 @@
             margin: 0px;
             padding: 0px;
         }
-        /* ---------- Navbar styles ---------- */
-        :root{
-            --nav-height: 64px;
-            --nav-padding: 1rem;
-            --nav-bg: rgba(255,255,255,0.06); /* slight translucent for light backgrounds */
-            --nav-link-color: rgb(66, 62, 62);
-            --nav-link-hover: rgb(0, 0, 0);
-        }
+/* --- COMPLETE NAVBAR OVERHAUL --- */
+.heritage-navbar {
+    background-color: #ffffff !important; /* Forces solid white background */
+    border-bottom: 2px solid #b49b69; /* Gold line to separate from hero */
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 9999;
+}
+
+/* LOGO FIX: Turn white image into dark brown/charcoal */
+.nav-brand-logo {
+    height: 60px;
+    width: auto;
+    filter: brightness(0) saturate(100%) invert(18%) sepia(9%) saturate(830%) hue-rotate(334deg) brightness(95%) contrast(88%);
+}
+
+/* BRAND TEXT VISIBILITY */
+.brand-text-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #342a26 !important; /* Dark Brown */
+    line-height: 1;
+}
+
+.brand-heritage {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #b49b69 !important; /* Gold */
+    letter-spacing: 1px;
+    margin-top: 4px;
+}
+
+/* LINK VISIBILITY: Forces dark text */
+.nav-link-custom {
+    color: #342a26 !important; /* DARK CHARCOAL - VISIBLE ON WHITE */
+    font-weight: 800 !important;
+    font-size: 0.9rem !important;
+    letter-spacing: 1px;
+    padding: 10px 20px !important;
+    text-decoration: none;
+}
+
+.nav-link-custom:hover {
+    color: #b49b69 !important; /* Turns Gold on Hover */
+}
+
+/* CONTACT BUTTON STYLE */
+.nav-btn-style {
+    background-color: #342a26;
+    color: #ffffff !important; /* White text on dark button */
+    border-radius: 4px;
+    margin-left: 15px;
+}
+
+.nav-btn-style:hover {
+    background-color: #b49b69;
+    color: #ffffff !important;
+}
+
+/* Mobile Toggler Fix */
+.custom-toggler .navbar-toggler-icon {
+    filter: invert(1); /* Makes hamburger visible if background is white */
+}   
+/* --- SMOOTH SCROLL TRANSITION --- */
+
+
+/* Scrolled State */
+.heritage-navbar.navbar-scrolled {
+    min-height: 70px !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Smooth Logo Scaling */
+.nav-brand-logo {
+    transition: height 0.5s ease;
+}
+.navbar-scrolled .nav-brand-logo {
+    height: 45px !important;
+}
+
+/* Fix Brand Text Snapping */
+.brand-text-group {
+    transition: transform 0.5s ease;
+}
+.navbar-scrolled .brand-text-group {
+    transform: scale(0.9); /* Slightly shrinks without changing layout width */
+    transform-origin: left center;
+}
+
+/* Keep Nav Links Centered vertically */
+.navbar-nav {
+    align-items: center;
+}
+
+
 
         /* ---------- Fixed Responsive Hero Section - Text Stays on Left Wall ---------- */
 .hero-sec {
@@ -301,68 +396,199 @@
         .door-img{
             padding: 0px;
         }
-        /* Services section styling */
-        .services-section{
-            padding: 2.5rem 0;
-        }
-        .services-section h3{
-            font-size: 1.6rem;
-            margin: 0 0 0.5rem 0;
-        }
-      /* Update services grid for 4 cards */
-.services-grid{
+
+        /* --- Heritage Section Styling --- */
+.heritage-section {
+    padding: 80px 0;
+    background-color: #f9f5f3; /* Light cream background to separate sections */
+    border-top: 1px solid #efe7df;
+    border-bottom: 1px solid #efe7df;
+}
+
+.heritage-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #342a26;
+    margin-bottom: 1rem;
+}
+
+.heritage-intro {
+    font-size: 1.1rem;
+    color: rgba(52, 42, 38, 0.8);
+    line-height: 1.6;
+}
+
+/* Timeline Layout */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 2rem;
+    border-left: 2px solid #b49b69; /* The Gold Line */
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+/* The Dot on the Line */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -37px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: #b49b69;
+    border-radius: 50%;
+    border: 3px solid #f9f5f3;
+}
+
+.timeline-year {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    color: #b49b69;
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.timeline-content h5 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #342a26;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+    .heritage-title { text-align: center; }
+    .heritage-intro { text-align: center; margin-bottom: 3rem; }
+}
+/* Services section styling */
+.services-modern-section {
+    padding: 5rem 0;
+    background-color: #fff;
+}
+
+.services-subtitle {
+    font-family: 'Inter', sans-serif;
+    color: #b49b69;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-top: -10px;
+}
+
+.services-modern-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Changed to 4 */
-    gap: 1.25rem;
-    align-items: start;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
 }
 
-@media (max-width: 1200px){
-    .services-grid{ grid-template-columns: repeat(2, 1fr); }
+.service-modern-card {
+    background: transparent;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
 }
 
-@media (max-width: 900px){
-    .services-grid{ grid-template-columns: repeat(2, 1fr); }
+/* Image Container with Number Overlay */
+.card-img-container {
+    position: relative;
+    overflow: hidden;
+    height: 280px;
+    margin-bottom: 1.5rem;
 }
 
-@media (max-width: 600px){
-    .services-grid{ grid-template-columns: 1fr; }
+.card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
 }
 
-/* Remove the old h3 margin if using section-heading */
-.services-section h3 { display: none; } /* Hide the old h3 since we use section-heading now */
-        .service-card{
-            padding: 0;
-            border-radius: 12px;
-            background: #fff;
-            box-shadow: 0 8px 24px rgba(17,17,17,0.04);
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            overflow: hidden;
-            transition: transform 220ms ease, box-shadow 220ms ease;
-        }
-        .service-card:hover{ transform: translateY(-8px); box-shadow: 0 20px 40px rgba(17,17,17,0.12); }
-        .service-thumb{ width: 100%; height: 160px; object-fit: cover; display:block; }
-        .service-body{ padding: 1rem 1.25rem 1.25rem 1.25rem; display:flex; flex-direction:column; gap:0.6rem; }
-        .service-icon{
-            font-size: 1.25rem;
-            width: 44px;
-            height: 44px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            background: linear-gradient(180deg, #efe7df, #f9f5f3);
-        }
-        .service-card h4{ margin: 0; font-size: 1.05rem; }
-        .service-card p{ margin: 0; color: rgba(34,34,34,0.75); font-size: 0.95rem; }
-        @media (max-width: 900px){
-            .services-grid{ grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 600px){
-            .services-grid{ grid-template-columns: 1fr; }
-        }
+.service-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #fff;
+    background: rgba(180, 155, 105, 0.9); /* Gold background */
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+/* Hover Effects */
+.service-modern-card:hover .card-img-container img {
+    transform: scale(1.1);
+}
+
+.service-modern-card:hover h4 {
+    color: #b49b69;
+}
+
+/* Card Body Content */
+.service-modern-body h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: #342a26;
+    margin-bottom: 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.service-modern-body p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(52, 42, 38, 0.7);
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+/* Modern Link Style instead of bulky buttons */
+.service-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #342a26;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.3s ease;
+}
+
+.service-link i {
+    font-size: 1.1rem;
+    color: #b49b69;
+}
+
+.service-link:hover {
+    color: #b49b69;
+    gap: 15px; /* Arrow moves on hover */
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 1200px) {
+    .services-modern-grid { grid-template-columns: repeat(2, 1fr); gap: 3rem; }
+}
+
+@media (max-width: 768px) {
+    .services-modern-grid { grid-template-columns: 1fr; }
+    .card-img-container { height: 320px; }
+}
         /* Themed section heading with thin lines */
         .section-heading{
             display: flex;
@@ -600,5 +826,222 @@
     
     .footer-contact li {
         justify-content: center;
+    }
+}
+/* ---------- MODERN ABOUT SECTION REDESIGN ---------- */
+
+.about-modern-section {
+    padding: 6rem 0;
+    background-color: #fcfbf9; /* Very subtle off-white */
+    overflow: hidden;
+}
+
+.section-subtitle {
+    font-family: 'Inter', sans-serif;
+    color: rgba(52, 42, 38, 0.6);
+    letter-spacing: 1px;
+    margin-top: -10px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+}
+
+/* Image Wrapper */
+.about-image-wrapper {
+    position: relative;
+    z-index: 1;
+    border-radius: 4px;
+    overflow: visible; /* Allow badge to pop out */
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+.main-about-img {
+    width: 100%;
+    height: 650px; /* Force a tall architectural height */
+    object-fit: cover;
+    border-radius: 4px;
+    filter: brightness(0.95) contrast(1.05); /* Slight luxury filter */
+}
+
+/* The Experience Badge */
+.experience-badge {
+    position: absolute;
+    bottom: 40px;
+    left: -30px; /* Pops out to the left */
+    background: #b49b69; /* Your gold accent */
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 0px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(180, 155, 105, 0.4);
+    z-index: 3;
+}
+
+.experience-badge .years {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.experience-badge .text {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-top: 5px;
+    display: block;
+}
+
+/* The Overlapping Content Card */
+.about-content-card {
+    background: #fff;
+    padding: 4rem;
+    margin-left: -80px; /* This creates the overlap effect */
+    position: relative;
+    z-index: 2;
+    border-left: 5px solid #b49b69;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+}
+
+.small-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #b49b69;
+    margin-bottom: 1rem;
+}
+
+.modern-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #342a26;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.modern-heading em {
+    font-style: italic;
+    color: #b49b69;
+}
+
+.lead-text {
+    font-size: 1.1rem;
+    color: #342a26;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.body-text {
+    font-size: 0.95rem;
+    color: rgba(52, 42, 38, 0.7);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+/* Stats Row */
+.stats-row {
+    display: flex;
+    gap: 3rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.stat-item strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #342a26;
+}
+
+.stat-item span {
+    font-size: 0.85rem;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Signature and Button */
+.action-group {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.signature-img {
+    height: 40px;
+    opacity: 0.6;
+}
+
+/* Modern Values Cards */
+.modern-value-card {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    height: 100%;
+    border: 1px solid rgba(0,0,0,0.03);
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.modern-value-card:hover {
+    transform: translateY(-5px);
+    border-bottom: 3px solid #b49b69;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+.modern-value-card .icon-box {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.modern-value-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .about-content-card {
+        margin-left: 0;
+        margin-top: -50px; /* Vertical overlap on tablet */
+        padding: 3rem;
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .main-about-img {
+        height: 400px;
+    }
+    .experience-badge {
+        left: 20px;
+        bottom: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-content-card {
+        margin-top: 0;
+        width: 100%;
+        padding: 2rem;
+        box-shadow: none;
+        border-left: none;
+        border-top: 5px solid #b49b69;
+    }
+    .modern-heading {
+        font-size: 2rem;
+    }
+    .experience-badge {
+        padding: 1rem;
+        bottom: 20px;
+    }
+    .experience-badge .years {
+        font-size: 1.8rem;
+    }
+    .stats-row {
+        gap: 1.5rem;
     }
 }
