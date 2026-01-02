@@ -50,3 +50,36 @@
         navbar.classList.remove('navbar-scrolled');
     }
 });
+  // Selection of all nav-links inside the mobile menu
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const menuToggle = document.getElementById('navbarNav'); // Use 'offcanvasNavbar' if using offcanvas
+    const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false});
+
+    navLinks.forEach((l) => {
+        l.addEventListener('click', () => {
+            // Only close if the menu is currently shown (important for mobile)
+            if (menuToggle.classList.contains('show')) {
+                bsCollapse.hide();
+            }
+        });
+    });
+  
+document.addEventListener('DOMContentLoaded', function() {
+    const aboutOptions = {
+        threshold: 0.2 // Trigger when 20% of the section is visible
+    };
+
+    const aboutObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                // Once it animates in, stop watching it (for performance)
+                aboutObserver.unobserve(entry.target);
+            }
+        });
+    }, aboutOptions);
+
+    // Select the left and right columns to animate
+    const animatedElements = document.querySelectorAll('.about-animate-left, .about-animate-right');
+    animatedElements.forEach(el => aboutObserver.observe(el));
+});

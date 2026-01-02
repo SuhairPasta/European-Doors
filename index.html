@@ -1,332 +1,364 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Decorative font for the big heading -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
 
     <title>European Doors</title>
-   
+
 </head>
+
 <body>
-<nav class="navbar navbar-expand-lg fixed-top heritage-navbar">
-    <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="images/Logo.png" alt="Logo" class="nav-brand-logo">
-            <div class="brand-text-group ms-3">
-                <span class="brand-title">European Doors</span>
-                <span class="brand-heritage">A BRANCH OF THE WOOD COMPANY • EST. 2001</span>
+    <nav class="navbar navbar-expand-lg fixed-top heritage-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/Logo.png" alt="Logo" class="nav-brand-logo">
+                <div class="brand-text-group ms-3">
+                    <span class="brand-title">European Doors</span>
+                    <span class="brand-heritage">A BRANCH OF THE WOOD COMPANY • EST. 2001</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>  
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="#services">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom nav-btn-style" href="#contact">CONTACT US</a>
+                    </li>
+                </ul>
             </div>
-        </a>
-
-        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link nav-link-custom" href="#home">HOME</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-custom" href="#about">ABOUT</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-custom" href="#services">SERVICES</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-custom nav-btn-style" href="#contact">CONTACT US</a>
-                </li>
-            </ul>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <!-- Hero Section -->
- <section id="landing_page" class="hero-sec">
+    <section id="landing_page" class="hero-sec">
         <div class="hero-content">
             <div class="hero-card" role="region" aria-label="Hero">
                 <div class="hero-eyebrow">Discover the Beauty of Sustainable Woodwork</div>
-                <h1 class="hero-title">Elevating<br/>Architectural</h1>
+                <h1 class="hero-title">Elevating<br />Architectural</h1>
                 <p class="hero-desc">Crafting Timeless Elegance: Explore Our Custom Wooden Doors, Window Frames</p>
             </div>
         </div>
     </section>
     <!-- About Section -->
-<section id="about" class="about-modern-section">
-    <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-lg-8 text-center">
-                <div class="section-heading" role="heading" aria-level="2">About Us</div>
-                <p class="section-subtitle">A Premier Division of <strong>The Wood Company</strong></p>
-            </div>
-        </div>
-
-        <div class="row align-items-center relative-wrapper">
-            <div class="col-lg-6 p-0 image-column">
-                <div class="about-image-wrapper">
-                    <img src="images/door_image.png" alt="Master carpenter at The Wood Company workshop" class="img-fluid main-about-img">
-                    
-                    <div class="experience-badge">
-                        <span class="years">20+</span>
-                        <span class="text">Years of<br>Excellence</span>
-                    </div>
+    <section id="about" class="about-modern-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <div class="section-heading" role="heading" aria-level="2">About Us</div>
+                    <p class="section-subtitle">A Premier Division of <strong>The Wood Company</strong></p>
                 </div>
             </div>
 
-            <div class="col-lg-6 content-column">
-                <div class="about-content-card">
-                    <div class="small-tag">Est. 2001 • The Wood Company</div>
-                    <h2 class="modern-heading">A Legacy of Craftsmanship, <br><em>Reimagined.</em></h2>
-                    
-                    <p class="lead-text">
-                        European Doors is the specialized architectural branch of The Wood Company, bringing decades of expertise to modern luxury living.
-                    </p>
-                    
-                    <p class="body-text">
-                        Since 2001, <strong>The Wood Company</strong> has been a pillar of quality in the industry. As our specialized division, <strong>European Doors</strong> was created to focus exclusively on high-end, bespoke entrances and joinery. We combine the proven reliability of our parent company with a fresh, design-forward approach inspired by European aesthetics. When you choose us, you get the innovation of a modern brand backed by a quarter-century of woodworking mastery.
-                    </p>
-                    
-                    <div class="stats-row">
-                        <div class="stat-item">
-                            <strong>2001</strong>
-                            <span>Established</span>
-                        </div>
-                        <div class="stat-item">
-                            <strong>250+</strong>
-                            <span>Projects</span>
-                        </div>
-                        <div class="stat-item">
-                            <strong>100%</strong>
-                            <span>Customer Satisfaction</span>
-                        </div>
-                    </div>
+            <div class="row align-items-center relative-wrapper">
+                <div class="col-lg-6 p-0 image-column">
+                    <div class="about-image-wrapper">
+                        <img src="images/door_image.png" alt="Master carpenter at The Wood Company workshop"
+                            class="img-fluid main-about-img">
 
-                    <div class="action-group mt-4">
-                        <a href="#contact" class="btn btn-primary btn-lg">Discuss Your Vision</a>
-                        <div class="signature-text" style="font-family: 'Playfair Display', serif; font-style: italic; color: #b49b69;">
-                            The Wood Company
+                        <div class="experience-badge">
+                            <span class="years">20+</span>
+                            <span class="text">Years of<br>Excellence</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 content-column">
+                    <div class="about-content-card">
+                        <div class="small-tag">Est. 2001 • The Wood Company</div>
+                        <h2 class="modern-heading">A Legacy of Craftsmanship, <br><em>Reimagined.</em></h2>
+
+                        <p class="lead-text">
+                            European Doors is the specialized architectural branch of The Wood Company, bringing decades
+                            of expertise to modern luxury living.
+                        </p>
+
+                        <p class="body-text">
+                            Since 2001, <strong>The Wood Company</strong> has been a pillar of quality in the industry.
+                            As our specialized division, <strong>European Doors</strong> was created to focus
+                            exclusively on high-end, bespoke entrances and joinery. We combine the proven reliability of
+                            our parent company with a fresh, design-forward approach inspired by European aesthetics.
+                            When you choose us, you get the innovation of a modern brand backed by a quarter-century of
+                            woodworking mastery.
+                        </p>
+
+                        <div class="stats-row">
+                            <div class="stat-item">
+                                <strong>2001</strong>
+                                <span>Established</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>250+</strong>
+                                <span>Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>100%</strong>
+                                <span>Customer Satisfaction</span>
+                            </div>
+                        </div>
+
+                        <div class="action-group mt-4">
+                            <a href="#contact" class="btn btn-primary btn-lg">Discuss Your Vision</a>
+                            <div class="signature-text"
+                                style="font-family: 'Playfair Display', serif; font-style: italic; color: #b49b69;">
+                                The Wood Company
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    
-        <div class="row values-section-modern mt-5 pt-5">
-            <div class="col-12 text-center mb-4">
-                 <h3 class="values-heading">The Family Standard</h3>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="modern-value-card">
-                    <div class="icon-box">🌿</div>
-                    <h4>Generational Quality</h4>
-                    <p>Building on 25 years of sourcing experience to bring you the finest, responsibly harvested timber.</p>
+    </section>
+    <!-- Values Section -->
+    <section class="values-modern-section">
+        <div class="container">
+            <div class="row values-section-modern mt-5 pt-5">
+                <div class="col-12 text-center mb-4">
+                    <h3 class="values-heading">The Family Standard</h3>
                 </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="modern-value-card">
-                    <div class="icon-box">🛡️</div>
-                    <h4>Trusted Reliability</h4>
-                    <p>Backed by The Wood Company's infrastructure, ensuring financial stability and on-time delivery.</p>
+                <div class="col-md-4 mb-4">
+                    <div class="modern-value-card">
+                        <div class="icon-box">🌿</div>
+                        <h4>Generational Quality</h4>
+                        <p>Building on 25 years of sourcing experience to bring you the finest, responsibly harvested
+                            timber.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="modern-value-card">
-                    <div class="icon-box">💎</div>
-                    <h4>Specialized Design</h4>
-                    <p>While our roots are traditional, this branch is dedicated purely to modern architectural elegance.</p>
+                <div class="col-md-4 mb-4">
+                    <div class="modern-value-card">
+                        <div class="icon-box">🛡️</div>
+                        <h4>Trusted Reliability</h4>
+                        <p>Backed by The Wood Company's infrastructure, ensuring financial stability and on-time
+                            delivery.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="modern-value-card">
+                        <div class="icon-box">💎</div>
+                        <h4>Specialized Design</h4>
+                        <p>While our roots are traditional, this branch is dedicated purely to modern architectural
+                            elegance.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
     <!-- Heritage Section -->
-<section class="heritage-section">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-4">
-                <h3 class="heritage-title">Our Legacy</h3>
-                <p class="heritage-intro">From a local workshop to an architectural leader. Explore the journey of <strong>The Wood Company</strong> and its premier branch, <strong>European Doors</strong>.</p>
-            </div>
-            <div class="col-lg-8">
-                <div class="timeline-container">
-                    <div class="timeline-item">
-                        <div class="timeline-year">2001</div>
-                        <div class="timeline-content">
-                            <h5>The Foundation</h5>
-                            <p>The Wood Company is founded with a mission to revive traditional joinery techniques.</p>
+    <section class="heritage-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <h3 class="heritage-title">Our Legacy</h3>
+                    <p class="heritage-intro">From a local workshop to an architectural leader. Explore the journey of
+                        <strong>The Wood Company</strong> and its premier branch, <strong>European Doors</strong>.</p>
+                </div>
+                <div class="col-lg-8">
+                    <div class="timeline-container">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2001</div>
+                            <div class="timeline-content">
+                                <h5>The Foundation</h5>
+                                <p>The Wood Company is founded with a mission to revive traditional joinery techniques.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">2012</div>
-                        <div class="timeline-content">
-                            <h5>European Expansion</h5>
-                            <p>Adopting European precision machinery and luxury aesthetic standards.</p>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2012</div>
+                            <div class="timeline-content">
+                                <h5>European Expansion</h5>
+                                <p>Adopting European precision machinery and luxury aesthetic standards.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">2025</div>
-                        <div class="timeline-content">
-                            <h5>European Doors Division</h5>
-                            <p>Celebrating 25 years by launching our specialized architectural branch.</p>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2025</div>
+                            <div class="timeline-content">
+                                <h5>European Doors Division</h5>
+                                <p>Celebrating 25 years by launching our specialized architectural branch.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-   <!-- Our Services -->
+    </section>
+    <!-- Our Services -->
     <section id="services" class="services-modern-section" aria-labelledby="services-heading">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center mb-5">
-                <div class="section-heading" role="heading" aria-level="2">Our Services</div>
-                <p class="services-subtitle">Precision Engineering. Masterful Execution.</p>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <div class="section-heading" role="heading" aria-level="2">Our Services</div>
+                    <p class="services-subtitle">Precision Engineering. Masterful Execution.</p>
+                </div>
+            </div>
+
+            <div class="services-modern-grid">
+                <article class="service-modern-card">
+                    <div class="card-img-container">
+                        <img src="images/design-consultation.webp" alt="Design consultation" />
+                        <div class="service-number">01</div>
+                    </div>
+                    <div class="service-modern-body">
+                        <h4>Design Consultation</h4>
+                        <p>Collaborative architectural planning to align your vision with our 25-year technical
+                            expertise.</p>
+                        <a href="#contact" class="service-link">Get Started <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="service-modern-card">
+                    <div class="card-img-container">
+                        <img src="images/custom-design.jpg" alt="Manufacturing" />
+                        <div class="service-number">02</div>
+                    </div>
+                    <div class="service-modern-body">
+                        <h4>Custom Manufacturing</h4>
+                        <p>State-of-the-art precision cutting combined with traditional hand-finishing in our central
+                            workshops.</p>
+                        <a href="#contact" class="service-link">Request Quote <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="service-modern-card">
+                    <div class="card-img-container">
+                        <img src="images/installation-delivery.jpg" alt="Installation" />
+                        <div class="service-number">03</div>
+                    </div>
+                    <div class="service-modern-body">
+                        <h4>Installation & Delivery</h4>
+                        <p>White-glove delivery and professional fitting by master joiners to ensure a perfect
+                            architectural seal.</p>
+                        <a href="#contact" class="service-link">Book Fitting <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="service-modern-card">
+                    <div class="card-img-container">
+                        <img src="images/after-sales.jpg" alt="After-sales support" />
+                        <div class="service-number">04</div>
+                    </div>
+                    <div class="service-modern-body">
+                        <h4>Legacy Maintenance</h4>
+                        <p>Comprehensive after-care and restoration support, backed by the stability of The Wood
+                            Company.</p>
+                        <a href="#contact" class="service-link">Contact Support <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </article>
             </div>
         </div>
+    </section>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-brand">European Doors</h5>
+                    <p class="small text-uppercase tracking-wider mb-2"
+                        style="color: #b49b69; font-weight: 700; font-size: 0.75rem; letter-spacing: 1px;">
+                        A specialized branch of The Wood Company
+                    </p>
+                    <p class="footer-desc">
+                        Since 2001, we have been blending traditional craftsmanship with modern sustainability. As a
+                        premier division of <strong>The Wood Company</strong>, we create entrances that define
+                        architecture and elevate living spaces.
+                    </p>
+                    <div class="social-links mt-4">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
 
-        <div class="services-modern-grid">
-            <article class="service-modern-card">
-                <div class="card-img-container">
-                    <img src="images/design-consultation.webp" alt="Design consultation" />
-                    <div class="service-number">01</div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-heading">Company</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#landing_page">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
                 </div>
-                <div class="service-modern-body">
-                    <h4>Design Consultation</h4>
-                    <p>Collaborative architectural planning to align your vision with our 25-year technical expertise.</p>
-                    <a href="#contact" class="service-link">Get Started <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </article>
 
-            <article class="service-modern-card">
-                <div class="card-img-container">
-                    <img src="images/custom-design.jpg" alt="Manufacturing" />
-                    <div class="service-number">02</div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-heading">Services</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Custom Doors</a></li>
+                        <li><a href="#">Window Frames</a></li>
+                        <li><a href="#">Design Consultation</a></li>
+                        <li><a href="#">Restoration</a></li>
+                        <li><a href="#">Commercial Projects</a></li>
+                    </ul>
                 </div>
-                <div class="service-modern-body">
-                    <h4>Custom Manufacturing</h4>
-                    <p>State-of-the-art precision cutting combined with traditional hand-finishing in our central workshops.</p>
-                    <a href="#contact" class="service-link">Request Quote <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </article>
 
-            <article class="service-modern-card">
-                <div class="card-img-container">
-                    <img src="images/installation-delivery.jpg" alt="Installation" />
-                    <div class="service-number">03</div>
-                </div>
-                <div class="service-modern-body">
-                    <h4>Installation & Delivery</h4>
-                    <p>White-glove delivery and professional fitting by master joiners to ensure a perfect architectural seal.</p>
-                    <a href="#contact" class="service-link">Book Fitting <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </article>
-
-            <article class="service-modern-card">
-                <div class="card-img-container">
-                    <img src="images/after-sales.jpg" alt="After-sales support" />
-                    <div class="service-number">04</div>
-                </div>
-                <div class="service-modern-body">
-                    <h4>Legacy Maintenance</h4>
-                    <p>Comprehensive after-care and restoration support, backed by the stability of The Wood Company.</p>
-                    <a href="#contact" class="service-link">Contact Support <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </article>
-        </div>
-    </div>
-</section>
-<footer class="site-footer">
-    <div class="container">
-        <div class="row gy-5">
-            <div class="col-lg-4 col-md-6">
-                <h5 class="footer-brand">European Doors</h5>
-                <p class="small text-uppercase tracking-wider mb-2" style="color: #b49b69; font-weight: 700; font-size: 0.75rem; letter-spacing: 1px;">
-                    A specialized branch of The Wood Company
-                </p>
-                <p class="footer-desc">
-                    Since 2001, we have been blending traditional craftsmanship with modern sustainability. As a premier division of <strong>The Wood Company</strong>, we create entrances that define architecture and elevate living spaces.
-                </p>
-                <div class="social-links mt-4">
-                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                    <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-heading">Contact Us</h6>
+                    <ul class="list-unstyled footer-contact">
+                        <li>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>123 Woodwork Ave,<br>Craftsman City, EU 54000</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-envelope-fill"></i>
+                            <a href="mailto:info@europeandoors.com">info@europeandoors.com</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-telephone-fill"></i>
+                            <a href="tel:+923219295562">+92 (321) 929-5562</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="col-lg-2 col-md-6">
-                <h6 class="footer-heading">Company</h6>
-                <ul class="list-unstyled footer-links">
-                    <li><a href="#landing_page">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Our Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
+            <hr class="footer-divider">
 
-            <div class="col-lg-3 col-md-6">
-                <h6 class="footer-heading">Services</h6>
-                <ul class="list-unstyled footer-links">
-                    <li><a href="#">Custom Doors</a></li>
-                    <li><a href="#">Window Frames</a></li>
-                    <li><a href="#">Design Consultation</a></li>
-                    <li><a href="#">Restoration</a></li>
-                    <li><a href="#">Commercial Projects</a></li>
-                </ul>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <h6 class="footer-heading">Contact Us</h6>
-                <ul class="list-unstyled footer-contact">
-                    <li>
-                        <i class="bi bi-geo-alt-fill"></i>
-                        <span>123 Woodwork Ave,<br>Craftsman City, EU 54000</span>
-                    </li>
-                    <li>
-                        <i class="bi bi-envelope-fill"></i>
-                        <a href="mailto:info@europeandoors.com">info@europeandoors.com</a>
-                    </li>
-                    <li>
-                        <i class="bi bi-telephone-fill"></i>
-                        <a href="tel:+923219295562">+92 (321) 929-5562</a>
-                    </li>
-                </ul>
+            <div class="row align-items-center copyright-section">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2001 - 2025 <strong>The Wood Company</strong>. European Doors is a registered
+                        trademark.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="legal-link">Privacy Policy</a>
+                    <span class="mx-2">•</span>
+                    <a href="#" class="legal-link">Terms of Service</a>
+                </div>
             </div>
         </div>
+    </footer>
 
-        <hr class="footer-divider">
-
-        <div class="row align-items-center copyright-section">
-            <div class="col-md-6 text-center text-md-start">
-                <p class="mb-0">&copy; 2001 - 2025 <strong>The Wood Company</strong>. European Doors is a registered trademark.</p>
-            </div>
-            <div class="col-md-6 text-center text-md-end">
-                <a href="#" class="legal-link">Privacy Policy</a>
-                <span class="mx-2">•</span>
-                <a href="#" class="legal-link">Terms of Service</a>
-            </div>
-        </div>
-    </div>
-</footer>
-
- <script src="script.js"></script>
+    <script src="script.js"></script>
+  
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-

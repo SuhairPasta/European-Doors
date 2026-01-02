@@ -61,7 +61,7 @@
     background-color: #342a26;
     color: #ffffff !important; /* White text on dark button */
     border-radius: 4px;
-    margin-left: 15px;
+    
 }
 
 .nav-btn-style:hover {
@@ -70,9 +70,61 @@
 }
 
 /* Mobile Toggler Fix */
-.custom-toggler .navbar-toggler-icon {
-    filter: invert(1); /* Makes hamburger visible if background is white */
-}   
+/* --- MODERN CUSTOM TOGGLER --- */
+.custom-toggler {
+    border: none !important;
+    padding: 10px;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+/* Container for the lines */
+.hamburger-menu {
+    width: 28px;
+    height: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+/* Individual lines */
+.hamburger-menu span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #342a26; /* Your brand dark charcoal */
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Modern staggered look: middle line slightly shorter */
+.hamburger-menu span:nth-child(2) {
+    width: 75%;
+    align-self: flex-end;
+}
+
+/* ANIMATION: When the menu is open */
+.custom-toggler:not(.collapsed) .hamburger-menu span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.custom-toggler:not(.collapsed) .hamburger-menu span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(10px);
+}
+
+.custom-toggler:not(.collapsed) .hamburger-menu span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+    width: 100%; /* Reset width for the "X" shape */
+}
+
+/* Hover effect */
+.custom-toggler:hover .hamburger-menu span:nth-child(2) {
+    width: 100%;
+} 
 /* --- SMOOTH SCROLL TRANSITION --- */
 
 
@@ -104,7 +156,74 @@
 .navbar-nav {
     align-items: center;
 }
+/* --- MOBILE RESPONSIVENESS FIX --- */
 
+/* Targets mobile phones (Small devices, 576px and down) */
+@media (max-width: 576px) {
+    .heritage-navbar {
+        /* Force a smaller height to save Hero section space */
+        min-height: 70px !important; 
+        padding: 5px 0 !important;
+    }
+
+    /* Shrink the Tree Logo */
+    .nav-brand-logo {
+        height: 35px !important;
+        margin-right: 8px !important;
+    }
+
+    /* Shrink the Brand Title */
+    .brand-title {
+        font-size: 1.1rem !important;
+    }
+
+    /* HIDE the sub-text on mobile to save horizontal space */
+    /* This prevents the toggler from jumping to the next line */
+    .brand-heritage {
+        display: none !important; 
+    }
+
+    /* Reduce the gap between logo and text */
+    .brand-text-group {
+        margin-left: 0 !important;
+    }
+
+    /* Make the custom toggler more compact */
+    .custom-toggler {
+        padding: 5px !important;
+    }
+    
+    .hamburger-menu {
+        width: 22px;
+        height: 14px;
+    }
+    .custom-toggler:not(.collapsed) .hamburger-menu span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.custom-toggler:not(.collapsed) .hamburger-menu span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(10px);
+}
+
+.custom-toggler:not(.collapsed) .hamburger-menu span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+    width: 100%; /* Reset width for the "X" shape */
+}
+}
+
+/* Targets Tablets (Medium devices) */
+@media (min-width: 577px) and (max-width: 991px) {
+    .nav-brand-logo {
+        height: 45px !important;
+    }
+    .brand-title {
+        font-size: 1.3rem !important;
+    }
+    .brand-heritage {
+        font-size: 0.55rem !important;
+    }
+}
 
 
         /* ---------- Fixed Responsive Hero Section - Text Stays on Left Wall ---------- */
@@ -396,6 +515,7 @@
         .door-img{
             padding: 0px;
         }
+        
 
         /* --- Heritage Section Styling --- */
 .heritage-section {
