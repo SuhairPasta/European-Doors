@@ -63,23 +63,49 @@
             }
         });
     });
-  
-document.addEventListener('DOMContentLoaded', function() {
-    const aboutOptions = {
-        threshold: 0.2 // Trigger when 20% of the section is visible
-    };
 
-    const aboutObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                // Once it animates in, stop watching it (for performance)
-                aboutObserver.unobserve(entry.target);
-            }
+window.onload = function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const productItems = document.querySelectorAll('.product-item');
+
+    // Make sure all items are visible on initial page load
+    productItems.forEach(item => item.classList.add('is-visible'));
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // 1. Update UI for the buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            const targetFilter = this.getAttribute('data-filter');
+
+            productItems.forEach(item => {
+                const itemCategory = item.getAttribute('data-category');
+                const shouldShow = targetFilter === 'all' || itemCategory === targetFilter;
+
+                if (shouldShow) {
+                    // Step A: Bring back to layout
+                    item.style.display = "block";
+                    // Step B: Trigger the CSS animation after a tiny delay
+                    setTimeout(() => {
+                        item.classList.add('is-visible');
+                    }, 50); // Increased delay slightly for stability
+                } else {
+                    // Step A: Trigger Fade Out animation
+                    item.classList.remove('is-visible');
+                    // Step B: Remove from layout after the 0.5s CSS transition finishes
+                    setTimeout(() => {
+                        if (!item.classList.contains('is-visible')) {
+                            item.style.display = "none";
+                        }
+                    }, 500); 
+                }
+            });
         });
-    }, aboutOptions);
+    });
+};
 
-    // Select the left and right columns to animate
-    const animatedElements = document.querySelectorAll('.about-animate-left, .about-animate-right');
-    animatedElements.forEach(el => aboutObserver.observe(el));
-});
+
+
+
+

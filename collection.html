@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <title>Collections</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top heritage-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/Logo.png" alt="Logo" class="nav-brand-logo">
+                <div class="brand-text-group ms-3">
+                    <span class="brand-title">European Doors</span>
+                    <span class="brand-heritage">A BRANCH OF THE WOOD COMPANY • EST. 2001</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <div class="hamburger-menu">
+                    <span></span><span></span><span></span>
+                </div>  
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html#about">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html#services">SERVICES</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom active" href="collection.html">COLLECTIONS</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom nav-btn-style" href="#contact">CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="collections" class="py-5 bg-light" style="margin-top: 80px;">
+        <div class="container py-5">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h6 class="text-uppercase fw-bold" style="color: #b49b69; letter-spacing: 3px;">Our Work</h6>
+                    <h2 class="brand-title" style="font-size: 2.5rem;">The Collections</h2>
+                    <p class="text-muted">Explore our signature series of artisanal doors and bespoke furniture.</p>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-12 d-flex justify-content-center flex-wrap filter-group">
+                    <button class="filter-btn active" data-filter="all">All Solutions</button>
+                    <button class="filter-btn" data-filter="doors">Doors</button>
+                    <button class="filter-btn" data-filter="framework">Framework</button>
+                    <button class="filter-btn" data-filter="interiors">Interiors</button>
+                    <button class="filter-btn" data-filter="materials">Materials</button>
+                </div>
+            </div>
+ <div class="row g-4 product-grid">
+
+                <div class="col-md-6 col-lg-4 product-item" data-category="doors">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="images/door_image.png" alt="Hydraulic Flush Door" class="img-fluid">
+                            <div class="product-overlay">
+                                <span class="category-tag">Premium Doors</span>
+                                <h4 class="product-name">Hydraulic Flush Door</h4>
+                                <p class="text-white-50 small">Sleek, seamless surfaces with advanced hydraulic
+                                    stability.</p>
+                                <a href="#contact" class="view-details">Request Specs →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 product-item" data-category="doors">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="images/door_image.png" alt="Hydraulic Skin Door" class="img-fluid">
+                            <div class="product-overlay">
+                                <span class="category-tag">Premium Doors</span>
+                                <h4 class="product-name">Hydraulic Skin Door</h4>
+                                <p class="text-white-50 small">High-pressure molded skins for a textured, elegant
+                                    finish.</p>
+                                <a href="#contact" class="view-details">Request Specs →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 product-item" data-category="doors">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="images/door_image.png" alt="Engineering/Pasting Door" class="img-fluid">
+                            <div class="product-overlay">
+                                <span class="category-tag">Premium Doors</span>
+                                <h4 class="product-name">Engineering / Pasting Door</h4>
+                                <p class="text-white-50 small">Cross-laminated timber core for maximum warp resistance.
+                                </p>
+                                <a href="#contact" class="view-details">Request Specs →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 product-item" data-category="doors">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="images/door_image.png" alt="Panel Door" class="img-fluid">
+                            <div class="product-overlay">
+                                <span class="category-tag">Premium Doors</span>
+                                <h4 class="product-name">Bespoke Panel Door</h4>
+                                <p class="text-white-50 small">Classic solid wood panels for timeless architectural
+                                    style.</p>
+                                <a href="#contact" class="view-details">Request Specs →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 product-item" data-category="interiors">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="images/door_image.png" alt="Kitchen Units" class="img-fluid">
+                            <div class="product-overlay">
+                                <span class="category-tag">Bespoke Interiors</span>
+                                <h4 class="product-name">Modern Kitchen Units</h4>
+                                <p class="text-white-50 small">Functional luxury cabinetry designed for the modern chef.
+                                </p>
+                                <a href="#contact" class="view-details">Discuss Design →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 product-item" data-category="interiors">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="images/door_image.png" alt="Wardrobe & Furniture" class="img-fluid">
+                            <div class="product-overlay">
+                                <span class="category-tag">Bespoke Interiors</span>
+                                <h4 class="product-name">Wardrobe & Custom Furniture</h4>
+                                <p class="text-white-50 small">Heirloom-quality storage solutions and living spaces.</p>
+                                <a href="#contact" class="view-details">Discuss Design →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 product-item" data-category="framework">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="images/door_image.png" alt="Door & Window Frame" class="img-fluid">
+                            <div class="product-overlay">
+                                <span class="category-tag">Architectural Framework</span>
+                                <h4 class="product-name">Door & Window Frames</h4>
+                                <p class="text-white-50 small">Precision-milled seasoned timber for a perfect fit.</p>
+                                <a href="#contact" class="view-details">Get a Quote →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 product-item" data-category="framework">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="images/door_image.png" alt="Window Shutter" class="img-fluid">
+                            <div class="product-overlay">
+                                <span class="category-tag">Architectural Framework</span>
+                                <h4 class="product-name">Window Shutters</h4>
+                                <p class="text-white-50 small">Enhanced privacy and thermal insulation with wood
+                                    aesthetics.</p>
+                                <a href="#contact" class="view-details">Get a Quote →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 product-item" data-category="framework">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="images/door_image.png" alt="Bidding / Railing / Moulding" class="img-fluid">
+                            <div class="product-overlay">
+                                <span class="category-tag">Architectural Framework</span>
+                                <h4 class="product-name">Moulding & Railing</h4>
+                                <p class="text-white-50 small">Fine-detailed finishing profiles to complete your space.
+                                </p>
+                                <a href="#contact" class="view-details">Get a Quote →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 product-item" data-category="materials">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="images/door_image.png" alt="Shuttering Ply" class="img-fluid">
+                            <div class="product-overlay">
+                                <span class="category-tag">Construction Materials</span>
+                                <h4 class="product-name">Premium Shuttering Ply</h4>
+                                <p class="text-white-50 small">High-repetition use plywood for industrial-grade casting.
+                                </p>
+                                <a href="#contact" class="view-details">Bulk Inquiry →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 product-item" data-category="materials">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="images/door_image.png" alt="Wood Plank" class="img-fluid">
+                            <div class="product-overlay">
+                                <span class="category-tag">Construction Materials</span>
+                                <h4 class="product-name">Seasoned Wood Planks</h4>
+                                <p class="text-white-50 small">Raw timber planks, chemically treated and kiln-dried.</p>
+                                <a href="#contact" class="view-details">Bulk Inquiry →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
