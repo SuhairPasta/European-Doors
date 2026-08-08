@@ -30,7 +30,8 @@
                 <img src="images/Logo.png" alt="Logo" class="nav-brand-logo">
                 <div class="brand-text-group ms-3">
                     <span class="brand-title">European Doors</span>
-                    <span class="brand-heritage">A BRANCH OF THE WOOD COMPANY • EST. 2001</span>
+                    <span class="brand-heritage desktop-heritage">A BRANCH OF THE WOOD COMPANY • EST. 2001</span>
+                    <span class="brand-heritage mobile-heritage">PREMIUM WOODWORKING</span>
                 </div>
             </a>
 
@@ -41,7 +42,7 @@
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>  
+                </div>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -50,18 +51,18 @@
                         <a class="nav-link nav-link-custom" href="index.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="#about">ABOUT</a>
+                        <a class="nav-link nav-link-custom" href="index.html#about">ABOUT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="#services">SERVICES</a>
+                        <a class="nav-link nav-link-custom" href="index.html#process">SERVICES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="collection.html">COLLECTIONS</a>
+                        <a class="nav-link nav-link-custom" href="#featured-projects">COLLECTIONS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom nav-btn-style" href="#contact">CONTACT US</a>
+                        <a class="nav-link nav-link-custom nav-btn-style" href="contact.html">CONTACT US</a>
                     </li>
-                    
+
                 </ul>
             </div>
         </div>
@@ -69,220 +70,588 @@
 
     <!-- Hero Section -->
     <section id="landing_page" class="hero-sec">
-        <div class="hero-content">
+        <div class="hero-overlay"></div>
+        <!-- Desktop Hero Content -->
+        <div class="hero-content desktop-hero">
             <div class="hero-card" role="region" aria-label="Hero">
-                <div class="hero-eyebrow">Discover the Beauty of Sustainable Woodwork</div>
-                <h1 class="hero-title">Elevating<br />Architectural</h1>
-                <p class="hero-desc">Crafting Timeless Elegance: Explore Our Custom Wooden Doors, Window Frames</p>
+                <div class="hero-eyebrow">CRAFTED IN WOOD.</div>
+                <h1 class="hero-title">Built for<br />Generations.</h1>
+                <p class="hero-desc">Premium Doors, Window Frames, Kitchen Units and Interior Woodwork – crafted with
+                    precision, delivered with pride.</p>
+
+                <div class="hero-actions">
+                    <a href="contact.html" class="btn-primary-custom">GET FREE QUOTE <i class="bi bi-arrow-right"></i></a>
+                    <a href="#featured-projects" class="btn-secondary-custom">VIEW OUR PROJECTS <i class="bi bi-play-circle-fill ms-1"></i></a>
+                </div>
+            </div>
+
+            <div class="hero-highlights-bar">
+                <div class="highlight-item">
+                    <i class="bi bi-award highlight-icon"></i>
+                    <div class="highlight-text">
+                        <strong>20+ Years</strong><br>Experience
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <i class="bi bi-house highlight-icon"></i>
+                    <div class="highlight-text">
+                        <strong>250+</strong><br>Successful Projects
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <i class="bi bi-tree highlight-icon"></i>
+                    <div class="highlight-text">
+                        <strong>Premium</strong><br>Quality Wood
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <i class="bi bi-truck highlight-icon"></i>
+                    <div class="highlight-text">
+                        <strong>On-Time</strong><br>Delivery
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Hero Content -->
+        <div class="hero-content mobile-hero d-none">
+            <div class="hero-card text-center" role="region" aria-label="Hero">
+                <div class="hero-eyebrow">PREMIUM WOODWORKING</div>
+                <div class="hero-ornament">
+                    <span class="ornament-line"></span>
+                    <i class="bi bi-leaf"></i>
+                    <span class="ornament-line"></span>
+                </div>
+                <h1 class="hero-title">Crafting Timeless<br/>Doors, Windows &<br/>Interiors</h1>
+                <p class="hero-desc">Built with precision, quality materials<br/>and 20+ years of craftsmanship.</p>
+
+                <div class="hero-actions">
+                    <a href="contact.html" class="btn-primary-custom w-100 justify-content-center">GET FREE QUOTE <i class="bi bi-arrow-right"></i></a>
+                    <a href="" class="btn-secondary-custom w-100 justify-content-center">EXPLORE PRODUCTS <i class="bi bi-arrow-right"></i></a>
+                </div>
+                
+                <div class="mobile-highlight mt-4">
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <i class="bi bi-star-fill star-icon"></i>
+                        <span class="highlight-underline">20+ Years Experience</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <!-- About Section -->
-    <section id="about" class="about-modern-section">
+
+   
+    <!-- About Section Redesign (Matches New Design) -->
+    <section id="about" class="about-elite-section">
+        <div class="container px-0 px-md-3">
+            <div class="about-wrapper-card">
+                <!-- PART 1: Top Section (Text Left, Image Right) -->
+                <div class="row about-top-row g-0">
+                    <!-- Left Text -->
+                    <div class="col-lg-5 about-top-text">
+                        <div class="elite-label">
+                            ABOUT US
+                            <span class="elite-line"></span>
+                        </div>
+
+                        <h2 class="elite-title">
+                            Crafted with Passion. Built for Generations.
+                        </h2>
+
+                        <div class="elite-desc">
+                            <p>At The Wood Company, we believe a door is more than just an entryway — it's the first
+                                impression of your home and a reflection of your taste.</p>
+                            <p>For over 20 years, we've been creating premium wooden doors, kitchen units, and interior
+                                woodwork that combine timeless craftsmanship with modern precision.</p>
+                        </div>
+
+                        <div class="elite-features">
+                            <div class="elite-feature-item">
+                                <div class="elite-feature-icon">
+                                    <i class="bi bi-tree"></i>
+                                </div>
+                                <div class="elite-feature-text">
+                                    <h4>Premium Materials</h4>
+                                    <p>We use only the finest quality timber for lasting beauty and strength.</p>
+                                </div>
+                            </div>
+
+                            <div class="elite-feature-item">
+                                <div class="elite-feature-icon">
+                                    <i class="bi bi-tools"></i>
+                                </div>
+                                <div class="elite-feature-text">
+                                    <h4>Custom Designs</h4>
+                                    <p>Every piece is custom-made to match your style and space perfectly.</p>
+                                </div>
+                            </div>
+
+                            <div class="elite-feature-item">
+                                <div class="elite-feature-icon">
+                                    <i class="bi bi-hammer"></i>
+                                </div>
+                                <div class="elite-feature-text">
+                                    <h4>Skilled Craftsmanship</h4>
+                                    <p>Our experienced artisans bring precision and care to every detail.</p>
+                                </div>
+                            </div>
+
+                            <div class="elite-feature-item">
+                                <div class="elite-feature-icon">
+                                    <i class="bi bi-award"></i>
+                                </div>
+                                <div class="elite-feature-text">
+                                    <h4>Complete Satisfaction</h4>
+                                    <p>From consultation to installation, your satisfaction is our promise.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="contact.html" class="elite-btn-primary mt-3">REQUEST FREE CONSULTATION <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Right Image -->
+                    <div class="col-lg-7 about-top-image-col">
+                        <div class="elite-img-wrapper">
+                            <img src="images/about 2.png" alt="Craftsman working on a wooden door"
+                                class="img-fluid elite-img-main">
+
+                            <!-- Floating Gold Badge -->
+                            <div class="elite-gold-badge">
+                                <i class="bi bi-record-circle badge-icon"></i>
+                                <span class="badge-num">20+</span>
+                                <span class="badge-text">YEARS OF<br>EXCELLENCE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PART 2: Stats Card -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="elite-stats-card">
+                            <div class="elite-stat">
+                                <i class="bi bi-people"></i>
+                                <div class="stat-num">20+</div>
+                                <div class="stat-label">YEARS EXPERIENCE</div>
+                                <div class="stat-line"></div>
+                            </div>
+                            <div class="elite-stat">
+                                <i class="bi bi-building"></i>
+                                <div class="stat-num">250+</div>
+                                <div class="stat-label">PROJECTS COMPLETED</div>
+                                <div class="stat-line"></div>
+                            </div>
+                            <div class="elite-stat">
+                                <i class="bi bi-star"></i>
+                                <div class="stat-num">100%</div>
+                                <div class="stat-label">CUSTOMER SATISFACTION</div>
+                                <div class="stat-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PART 3: Bottom Section (Pledge Left, Image Right) -->
+                <div class="row about-bottom-row align-items-center g-0">
+                    <!-- Left Text (Pledge) -->
+                    <div class="col-lg-6 about-pledge-text pe-lg-5">
+                        <div class="elite-label">
+                            OUR PLEDGE
+                        </div>
+
+                        <div class="pledge-quote-wrapper">
+                            <h2 class="elite-title">
+                                We don't just build doors, We craft experiences.
+                            </h2>
+                        </div>
+
+                        <div class="elite-desc">
+                            <p>Our team is dedicated to delivering products that stand the test of time — in quality,
+                                design, and durability. Thank you for trusting us to be a part of your journey.</p>
+                        </div>
+
+                        <div class="elite-signature-area mt-4">
+                            <div class="signature-font">Rizwan Pasta</div>
+                            <div class="signature-title">FOUNDER, THE WOOD COMPANY</div>
+                        </div>
+                    </div>
+
+                    <!-- Right Image (Door) -->
+                    <div class="col-lg-6 about-pledge-image-col">
+                        <img src="images/about second.png" alt="Premium wooden door installed"
+                            class="img-fluid elite-img-secondary">
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End about-wrapper-card -->
+        </div>
+    </section>
+
+    <!-- Our Products Section -->
+    <section id="products" class="products-section">
         <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-8 text-center">
-                    <div class="section-heading" role="heading" aria-level="2">About Us</div>
-                    <p class="section-subtitle">A Premier Division of <strong>The Wood Company</strong></p>
+
+            <!-- Section Header -->
+            <div class="products-header text-center">
+                <div class="products-eyebrow">
+                    <span class="eyebrow-line"></span>
+                    OUR PRODUCTS
+                    <span class="eyebrow-line"></span>
                 </div>
+                <h2 class="products-title">Crafted for Every Space</h2>
+                <p class="products-subtitle">From timeless doors to custom kitchens, every piece is<br>designed with
+                    precision, passion, and premium quality wood.</p>
+                <div class="products-ornament">❧</div>
             </div>
 
-            <div class="row align-items-center relative-wrapper">
-                <div class="col-lg-6 p-0 image-column">
-                    <div class="about-image-wrapper">
-                        <img src="images/door_image.png" alt="Master carpenter at The Wood Company workshop"
-                            class="img-fluid main-about-img">
+            <!-- Products Grid -->
+            <div class="products-grid">
 
-                        <div class="experience-badge">
-                            <span class="years">20+</span>
-                            <span class="text">Years of<br>Excellence</span>
+                <!-- Card 1: Premium Doors -->
+                <div class="product-card card-tall">
+                    <img src="images/product door.png" alt="Premium Doors" class="product-card-img">
+                    <div class="product-card-overlay">
+                        <div class="product-card-icon">
+                            <i class="bi bi-door-open"></i>
+                        </div>
+                        <div class="product-card-body">
+                            <h3 class="product-card-title">Premium Doors</h3>
+                            <p class="product-card-tags">Hydraulic Flush • Skin • Engineering • Panel</p>
+                            <a href="contact.html" class="product-card-link">Explore Collection <i
+                                    class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-6 content-column">
-                    <div class="about-content-card">
-                        <div class="small-tag">Est. 2001 • The Wood Company</div>
-                        <h2 class="modern-heading">A Legacy of Craftsmanship, <br><em>Reimagined.</em></h2>
-
-                        <p class="lead-text">
-                            European Doors is the specialized architectural branch of The Wood Company, bringing decades
-                            of expertise to modern luxury living.
-                        </p>
-
-                        <p class="body-text">
-                            Since 2001, <strong>The Wood Company</strong> has been a pillar of quality in the industry.
-                            As our specialized division, <strong>European Doors</strong> was created to focus
-                            exclusively on high-end, bespoke entrances and joinery. We combine the proven reliability of
-                            our parent company with a fresh, design-forward approach inspired by European aesthetics.
-                            When you choose us, you get the innovation of a modern brand backed by a quarter-century of
-                            woodworking mastery.
-                        </p>
-
-                        <div class="stats-row">
-                            <div class="stat-item">
-                                <strong>2001</strong>
-                                <span>Established</span>
-                            </div>
-                            <div class="stat-item">
-                                <strong>250+</strong>
-                                <span>Projects</span>
-                            </div>
-                            <div class="stat-item">
-                                <strong>100%</strong>
-                                <span>Customer Satisfaction</span>
-                            </div>
+                <!-- Card 2: Door & Window Frames -->
+                <div class="product-card card-wide">
+                    <img src="images/product window.png" alt="Door & Window Frames" class="product-card-img">
+                    <div class="product-card-overlay">
+                        <div class="product-card-icon">
+                            <i class="bi bi-grid-3x3-gap"></i>
                         </div>
-
-                        <div class="action-group mt-4">
-                            <a href="#contact" class="btn btn-primary btn-lg">Discuss Your Vision</a>
-                            <div class="signature-text"
-                                style="font-family: 'Playfair Display', serif; font-style: italic; color: #b49b69;">
-                                The Wood Company
-                            </div>
+                        <div class="product-card-body">
+                            <h3 class="product-card-title">Door & Window Frames</h3>
+                            <p class="product-card-tags">Door Frames • Window Frames • Window Shutters</p>
+                            <a href="contact.html" class="product-card-link">Explore Collection <i
+                                    class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
+
+                <!-- Card 3: Kitchen Units -->
+                <div class="product-card">
+                    <img src="images/product kitchen.png" alt="Kitchen Units" class="product-card-img">
+                    <div class="product-card-overlay">
+                        <div class="product-card-icon">
+                            <i class="bi bi-columns-gap"></i>
+                        </div>
+                        <div class="product-card-body">
+                            <h3 class="product-card-title">Kitchen Units</h3>
+                            <p class="product-card-tags">Custom design • Premium finish • Lasting beauty</p>
+                            <a href="contact.html" class="product-card-link">Explore Collection <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Wardrobes & Furniture -->
+                <div class="product-card card-tall">
+                    <img src="images/product closet and bedroom.png" alt="Wardrobes & Furniture"
+                        class="product-card-img">
+                    <div class="product-card-overlay">
+                        <div class="product-card-icon">
+                            <i class="bi bi-box-seam"></i>
+                        </div>
+                        <div class="product-card-body">
+                            <h3 class="product-card-title">Wardrobes & Furniture</h3>
+                            <p class="product-card-tags">Bespoke wardrobes • Custom furniture • Elegant storage</p>
+                            <a href="contact.html" class="product-card-link">Explore Collection <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Wood Materials -->
+                <div class="product-card">
+                    <img src="images/product wood.png" alt="Wood Materials" class="product-card-img">
+                    <div class="product-card-overlay">
+                        <div class="product-card-icon">
+                            <i class="bi bi-layers"></i>
+                        </div>
+                        <div class="product-card-body">
+                            <h3 class="product-card-title">Wood Materials</h3>
+                            <p class="product-card-tags">Mouldings • Wood Plank • Shuttering Ply</p>
+                            <a href="contact.html" class="product-card-link">Explore Collection <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Railings & Stair Components -->
+                <div class="product-card">
+                    <img src="images/product stairs.png" alt="Railings & Stair Components" class="product-card-img">
+                    <div class="product-card-overlay">
+                        <div class="product-card-icon">
+                            <i class="bi bi-bar-chart-steps"></i>
+                        </div>
+                        <div class="product-card-body">
+                            <h3 class="product-card-title">Railings & Stair Components</h3>
+                            <p class="product-card-tags">Wooden railings • Stair parts • Timeless craftsmanship</p>
+                            <a href="contact.html" class="product-card-link">Explore Collection <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom CTA Banner -->
+            <div class="products-cta-banner">
+                <div class="products-cta-icon">
+                    <i class="bi bi-pencil-square"></i>
+                </div>
+                <div class="products-cta-text">
+                    <h4>Looking for something custom?</h4>
+                    <p>We build solutions tailored to your needs.</p>
+                </div>
+                <a href="contact.html" class="products-cta-btn">Request a Free Quote <i
+                        class="bi bi-arrow-right"></i></a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- From Vision to Reality — Sticky Scroll Section -->
+    <!-- The outer wrapper is TALL to create scroll "room". The inner section stays pinned. -->
+    <div class="timeline-scroll-outer" id="timelineOuter">
+        <div class="timeline-sticky-inner">
+        <section id="process" class="timeline-section">
+            <div class="container">
+
+                <!-- Section Header -->
+                <div class="timeline-header text-center">
+                    <div class="timeline-eyebrow">
+                        <span class="eyebrow-line"></span>
+                        OUR PROCESS
+                        <span class="eyebrow-line"></span>
+                    </div>
+                    <h2 class="timeline-title">From Vision to Reality</h2>
+                    <div class="timeline-ornament">❧</div>
+                    <p class="timeline-subtitle">Every project follows a carefully planned journey — from the first conversation<br>to the final installation — ensuring exceptional craftsmanship at every stage.</p>
+                </div>
+
+                <!-- Timeline Track -->
+                <div class="timeline-track-wrapper">
+                    <div class="timeline-line-bg"></div>
+                    <div class="timeline-line-fill" id="timelineLine"></div>
+
+                <div class="timeline-steps">
+
+                    <!-- Step 1 (TOP) -->
+                    <div class="timeline-step top" data-step="1">
+                        <div class="step-card-wrapper">
+                            <div class="step-icon-circle">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="step-text-block">
+                                <div class="step-number">01</div>
+                                <h4 class="step-title">Consultation</h4>
+                                <p class="step-desc">We understand your vision, requirements and budget to recommend the perfect wood solution.</p>
+                            </div>
+                        </div>
+                        <div class="step-vertical-line"></div>
+                        <div class="step-dot"></div>
+                    </div>
+
+                    <!-- Step 2 (BOTTOM) -->
+                    <div class="timeline-step bottom" data-step="2">
+                        <div class="step-dot"></div>
+                        <div class="step-vertical-line"></div>
+                        <div class="step-card-wrapper">
+                            <div class="step-icon-circle">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+                                </svg>
+                            </div>
+                            <div class="step-text-block">
+                                <div class="step-number">02</div>
+                                <h4 class="step-title">Design & Planning</h4>
+                                <p class="step-desc">Our experts create detailed measurements, 3D designs and material selections tailored to your space.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 (TOP) -->
+                    <div class="timeline-step top" data-step="3">
+                        <div class="step-card-wrapper">
+                            <div class="step-icon-circle">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+                                </svg>
+                            </div>
+                            <div class="step-text-block">
+                                <div class="step-number">03</div>
+                                <h4 class="step-title">Precision Manufacturing</h4>
+                                <p class="step-desc">Using premium timber, advanced machinery and skilled craftsmanship to ensure unmatched quality.</p>
+                            </div>
+                        </div>
+                        <div class="step-vertical-line"></div>
+                        <div class="step-dot"></div>
+                    </div>
+
+                    <!-- Step 4 (BOTTOM) -->
+                    <div class="timeline-step bottom" data-step="4">
+                        <div class="step-dot"></div>
+                        <div class="step-vertical-line"></div>
+                        <div class="step-card-wrapper">
+                            <div class="step-icon-circle">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+                                </svg>
+                            </div>
+                            <div class="step-text-block">
+                                <div class="step-number">04</div>
+                                <h4 class="step-title">Delivery & Installation</h4>
+                                <p class="step-desc">On-time delivery and professional installation by our experienced and trained team.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 (TOP) -->
+                    <div class="timeline-step top" data-step="5">
+                        <div class="step-card-wrapper">
+                            <div class="step-icon-circle">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </div>
+                            <div class="step-text-block">
+                                <div class="step-number">05</div>
+                                <h4 class="step-title">After-Sales Support</h4>
+                                <p class="step-desc">We remain by your side with ongoing support and maintenance advice for lasting satisfaction.</p>
+                            </div>
+                        </div>
+                        <div class="step-vertical-line"></div>
+                        <div class="step-dot"></div>
+                    </div>
+
+                </div>
+                </div>
+
+            </div>
+
+            <!-- CTA Background Banner -->
+            <div class="timeline-cta-band">
+                <div class="timeline-cta-inner">
+                    <div class="timeline-cta-label">
+                        <span class="eyebrow-line"></span>
+                        READY TO START YOUR PROJECT?
+                        <span class="eyebrow-line"></span>
+                    </div>
+                    <a href="contact.html" class="timeline-cta-btn">GET IN TOUCH <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+        </div>
+    </div>
+
+    <!-- 3D Featured Projects Section -->
+    <section id="featured-projects" class="featured-3d-section">
+        <div class="container text-center mb-5">
+            <div class="timeline-eyebrow">
+                <span class="eyebrow-line"></span>
+                <span class="timeline-eyebrow-text">Featured Projects</span>
+                <span class="eyebrow-line"></span>
+            </div>
+            <h2 class="featured-title mt-3">Craftsmanship That Speaks for Itself</h2>
+            <div class="timeline-ornament">❧</div>
+            <p class="featured-subtitle">Experience our signature work, designed to elevate any architectural space.</p>
+        </div>
+
+        <div class="featured-carousel-container">
+
+            <div class="carousel-track" id="carouselTrack">
+                <!-- Card 0 -->
+                <div class="carousel-card" data-index="0">
+                    <img src="luxury_door_1782814342296.png" alt="Luxury Entrance Door" class="card-bg-img">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-number">01</div>
+                        <h4 class="card-title">Premium Oak<br>Entrance Door</h4>
+                        <p class="card-desc">Solid oak construction with premium finish and hardware.</p>
+                        <a href="#" class="card-btn">VIEW DETAILS &rarr;</a>
+                    </div>
+                </div>
+                <!-- Card 1 -->
+                <div class="carousel-card" data-index="1">
+                    <img src="luxury_kitchen_1782814352208.png" alt="Custom Kitchen" class="card-bg-img">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-number">02</div>
+                        <h4 class="card-title">Custom<br>Kitchen</h4>
+                        <p class="card-desc">Functional beauty designed for everyday living.</p>
+                        <a href="#" class="card-btn">VIEW DETAILS &rarr;</a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="carousel-card" data-index="2">
+                    <img src="luxury_wardrobe_1782814363601.png" alt="Modern Wardrobe" class="card-bg-img">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-number">03</div>
+                        <h4 class="card-title">Modern<br>Wardrobe</h4>
+                        <p class="card-desc">Tailored storage solutions that blend style and function.</p>
+                        <a href="#" class="card-btn">VIEW DETAILS &rarr;</a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="carousel-card" data-index="3">
+                    <img src="luxury_window_1782814374153.png" alt="Window System" class="card-bg-img">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-number">04</div>
+                        <h4 class="card-title">Window<br>System</h4>
+                        <p class="card-desc">Floor-to-ceiling premium oak frame system overlooking a lush garden.</p>
+                        <a href="#" class="card-btn">VIEW DETAILS &rarr;</a>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="carousel-card" data-index="4">
+                    <img src="luxury_staircase_1782814386678.png" alt="Staircase & Railings" class="card-bg-img">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-number">05</div>
+                        <h4 class="card-title">Staircase &<br>Railings</h4>
+                        <p class="card-desc">Floating solid walnut stairs with elegant minimalist glass railings.</p>
+                        <a href="#" class="card-btn">VIEW DETAILS &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Carousel Controls -->
+            <div class="carousel-controls">
+                <button class="carousel-btn prev-btn" id="carouselPrev"><i class="bi bi-chevron-left"></i></button>
+                <button class="carousel-btn next-btn" id="carouselNext"><i class="bi bi-chevron-right"></i></button>
+            </div>
+
+            <!-- Dots -->
+            <div class="carousel-dots" id="carouselDots">
+                <div class="dot active" data-index="0"></div>
+                <div class="dot" data-index="1"></div>
+                <div class="dot" data-index="2"></div>
+                <div class="dot" data-index="3"></div>
+                <div class="dot" data-index="4"></div>
             </div>
         </div>
     </section>
-    <!-- Values Section -->
-    <section class="values-modern-section">
-        <div class="container">
-            <div class="row values-section-modern mt-5 pt-5">
-                <div class="col-12 text-center mb-4">
-                    <h3 class="values-heading">The Family Standard</h3>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="modern-value-card">
-                        <div class="icon-box">🌿</div>
-                        <h4>Generational Quality</h4>
-                        <p>Building on 25 years of sourcing experience to bring you the finest, responsibly harvested
-                            timber.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="modern-value-card">
-                        <div class="icon-box">🛡️</div>
-                        <h4>Trusted Reliability</h4>
-                        <p>Backed by The Wood Company's infrastructure, ensuring financial stability and on-time
-                            delivery.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="modern-value-card">
-                        <div class="icon-box">💎</div>
-                        <h4>Specialized Design</h4>
-                        <p>While our roots are traditional, this branch is dedicated purely to modern architectural
-                            elegance.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Heritage Section -->
-    <section class="heritage-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-4">
-                    <h3 class="heritage-title">Our Legacy</h3>
-                    <p class="heritage-intro">From a local workshop to an architectural leader. Explore the journey of
-                        <strong>The Wood Company</strong> and its premier branch, <strong>European Doors</strong>.</p>
-                </div>
-                <div class="col-lg-8">
-                    <div class="timeline-container">
-                        <div class="timeline-item">
-                            <div class="timeline-year">2001</div>
-                            <div class="timeline-content">
-                                <h5>The Foundation</h5>
-                                <p>The Wood Company is founded with a mission to revive traditional joinery techniques.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-year">2012</div>
-                            <div class="timeline-content">
-                                <h5>European Expansion</h5>
-                                <p>Adopting European precision machinery and luxury aesthetic standards.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-year">2025</div>
-                            <div class="timeline-content">
-                                <h5>European Doors Division</h5>
-                                <p>Celebrating 25 years by launching our specialized architectural branch.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Our Services -->
-    <section id="services" class="services-modern-section" aria-labelledby="services-heading">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center mb-5">
-                    <div class="section-heading" role="heading" aria-level="2">Our Services</div>
-                    <p class="services-subtitle">Precision Engineering. Masterful Execution.</p>
-                </div>
-            </div>
 
-            <div class="services-modern-grid">
-                <article class="service-modern-card">
-                    <div class="card-img-container">
-                        <img src="images/design-consultation.webp" alt="Design consultation" />
-                        <div class="service-number">01</div>
-                    </div>
-                    <div class="service-modern-body">
-                        <h4>Design Consultation</h4>
-                        <p>Collaborative architectural planning to align your vision with our 25-year technical
-                            expertise.</p>
-                        <a href="#contact" class="service-link">Get Started <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </article>
+    
 
-                <article class="service-modern-card">
-                    <div class="card-img-container">
-                        <img src="images/custom-design.jpg" alt="Manufacturing" />
-                        <div class="service-number">02</div>
-                    </div>
-                    <div class="service-modern-body">
-                        <h4>Custom Manufacturing</h4>
-                        <p>State-of-the-art precision cutting combined with traditional hand-finishing in our central
-                            workshops.</p>
-                        <a href="#contact" class="service-link">Request Quote <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </article>
-
-                <article class="service-modern-card">
-                    <div class="card-img-container">
-                        <img src="images/installation-delivery.jpg" alt="Installation" />
-                        <div class="service-number">03</div>
-                    </div>
-                    <div class="service-modern-body">
-                        <h4>Installation & Delivery</h4>
-                        <p>White-glove delivery and professional fitting by master joiners to ensure a perfect
-                            architectural seal.</p>
-                        <a href="#contact" class="service-link">Book Fitting <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </article>
-
-                <article class="service-modern-card">
-                    <div class="card-img-container">
-                        <img src="images/after-sales.jpg" alt="After-sales support" />
-                        <div class="service-number">04</div>
-                    </div>
-                    <div class="service-modern-body">
-                        <h4>Legacy Maintenance</h4>
-                        <p>Comprehensive after-care and restoration support, backed by the stability of The Wood
-                            Company.</p>
-                        <a href="#contact" class="service-link">Contact Support <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
     <footer class="site-footer">
         <div class="container">
             <div class="row gy-5">
@@ -298,7 +667,7 @@
                         architecture and elevate living spaces.
                     </p>
                     <div class="social-links mt-4">
-                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.facebook.com/share/1CSL6rNeu1/" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                         <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
                         <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
@@ -308,10 +677,10 @@
                 <div class="col-lg-2 col-md-6">
                     <h6 class="footer-heading">Company</h6>
                     <ul class="list-unstyled footer-links">
-                        <li><a href="#landing_page">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Our Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#process">Our Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
 
@@ -331,11 +700,11 @@
                     <ul class="list-unstyled footer-contact">
                         <li>
                             <i class="bi bi-geo-alt-fill"></i>
-                            <span>123 Woodwork Ave,<br>Craftsman City, EU 54000</span>
+                            <span>Shop#1 Ramzu Plaza,<br>Old Haji Camp,Karachi Pakistan</span>
                         </li>
                         <li>
                             <i class="bi bi-envelope-fill"></i>
-                            <a href="mailto:info@europeandoors.com">info@europeandoors.com</a>
+                            <a href="mailto:pastarizwan@gmail.com">pastarizwan@gmail.com</a>
                         </li>
                         <li>
                             <i class="bi bi-telephone-fill"></i>
@@ -362,8 +731,8 @@
     </footer>
 
     <script src="script.js"></script>
-    
-  
+
+
 </body>
 
 </html>
