@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — European Doors</title>
+    <meta name="description" content="Get in touch with European Doors for custom door design consultations, quotes, installation bookings, and after-sales support.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =============================================
+           CONTACT PAGE — BESPOKE STYLES
+           ============================================= */
+
+        /* ---- Hero Banner ---- */
+        .contact-hero {
+            background-color: #221e1c;
+            padding: 160px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url('images/section.webp') center/cover no-repeat;
+            opacity: 0.15;
+        }
+
+        .contact-hero-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-hero-eyebrow {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #b49b69;
+            margin-bottom: 1rem;
+        }
+
+        .contact-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.05;
+            margin-bottom: 1.2rem;
+        }
+
+        .contact-hero h1 em {
+            font-style: italic;
+            color: #b49b69;
+        }
+
+        .contact-hero-desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.65);
+            max-width: 480px;
+            line-height: 1.7;
+        }
+
+        /* Gold divider line */
+        .gold-rule {
+            width: 60px;
+            height: 2px;
+            background: #b49b69;
+            margin: 1.5rem 0;
+        }
+
+        /* ---- Info Cards (left column) ---- */
+        .contact-info-section {
+            padding: 80px 0 100px;
+            background: #fcfbf9;
+        }
+
+        .info-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            padding: 1.75rem;
+            background: #fff;
+            border-left: 4px solid #b49b69;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateX(6px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+
+        .info-card-icon {
+            width: 48px;
+            height: 48px;
+            background: #342a26;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.2rem;
+            color: #b49b69;
+        }
+
+        .info-card-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #b49b69;
+            margin-bottom: 0.25rem;
+        }
+
+        .info-card-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: #342a26;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .info-card-value a {
+            color: #342a26;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .info-card-value a:hover {
+            color: #b49b69;
+        }
+
+        /* Hours table */
+        .hours-table {
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        .hours-table tr {
+            border-bottom: 1px solid rgba(52,42,38,0.08);
+        }
+
+        .hours-table td {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: rgba(52,42,38,0.75);
+            padding: 0.6rem 0;
+        }
+
+        .hours-table td:first-child {
+            font-weight: 600;
+            color: #342a26;
+        }
+
+        .hours-badge {
+            display: inline-block;
+            background: #b49b69;
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 2px;
+            margin-left: 6px;
+        }
+
+        /* ---- Contact Form (right column) ---- */
+        .contact-form-card {
+            background: #fff;
+            padding: 3rem 3rem;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.08);
+            border-top: 4px solid #b49b69;
+            position: relative;
+        }
+
+        @media (max-width: 991px) {
+            .contact-form-card {
+                padding: 2rem 1.5rem;
+                margin-top: 3rem;
+            }
+        }
+
+        .contact-form-card .form-section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #342a26;
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-form-card .form-section-sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: #b49b69;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        /* Input groups */
+        .contact-form-card .form-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #342a26;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form-card .form-control,
+        .contact-form-card .form-select {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: #342a26;
+            border: 1px solid rgba(52,42,38,0.18);
+            border-radius: 0;
+            padding: 0.85rem 1rem;
+            background-color: #faf9f7;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            outline: none;
+        }
+
+        .contact-form-card .form-control:focus,
+        .contact-form-card .form-select:focus {
+            border-color: #b49b69;
+            box-shadow: 0 0 0 3px rgba(180,155,105,0.15);
+            background-color: #fff;
+        }
+
+        .contact-form-card .form-control::placeholder {
+            color: rgba(52,42,38,0.35);
+            font-style: italic;
+        }
+
+        .contact-form-card textarea.form-control {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+        .contact-form-card .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23b49b69' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 12px;
+            cursor: pointer;
+        }
+
+        /* Submit button */
+        .btn-contact-submit {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            background: #342a26;
+            color: #fff;
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 0;
+            width: 100%;
+            margin-top: 0.5rem;
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-contact-submit:hover {
+            background: #b49b69;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(180,155,105,0.35);
+        }
+
+        .btn-contact-submit i {
+            margin-left: 10px;
+            font-size: 1rem;
+        }
+
+        /* Input wrapper for the floating gold bar on focus */
+        .field-wrap {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .field-wrap::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #b49b69;
+            transition: width 0.3s ease;
+        }
+
+        .field-wrap:focus-within::after {
+            width: 100%;
+        }
+
+        /* Success message */
+        .form-success-msg {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .form-success-msg i {
+            font-size: 3rem;
+            color: #b49b69;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        /* ---- Privacy note ---- */
+        .privacy-note {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.78rem;
+            color: rgba(52,42,38,0.45);
+            margin-top: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR (identical to rest of site) -->
+    <nav class="navbar navbar-expand-lg fixed-top heritage-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/Logo.png" alt="Logo" class="nav-brand-logo">
+                <div class="brand-text-group ms-3">
+                    <span class="brand-title">European Doors</span>
+                    <span class="brand-heritage">A BRANCH OF THE WOOD COMPANY • EST. 2001</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="index.html#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="index.html#services">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="collection.html">COLLECTIONS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom nav-btn-style active" href="contact.html">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO BANNER -->
+    <section class="contact-hero">
+        <div class="container contact-hero-inner">
+            <div class="row">
+                <div class="col-lg-7">
+                    <p class="contact-hero-eyebrow">European Doors • Est. 2001</p>
+                    <h1>Let's Discuss<br><em>Your Vision.</em></h1>
+                    <div class="gold-rule"></div>
+                    <p class="contact-hero-desc">
+                        Whether you're planning a bespoke entrance, a full interior joinery project, or simply want to explore our collections — our team is ready to bring your vision to life.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="row align-items-start">
+
+                <!-- LEFT: Info Cards -->
+                <div class="col-lg-4 col-md-12 mb-5 mb-lg-0">
+
+                    <p class="small-tag">Reach Us Directly</p>
+                    <h2 class="modern-heading" style="font-size: 2rem; margin-bottom: 2rem;">We're Always<br><em>Here for You.</em></h2>
+
+                    <div class="info-card">
+                        <div class="info-card-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                        <div>
+                            <p class="info-card-label">Our Workshop</p>
+                            <p class="info-card-value">123 Woodwork Avenue,<br>Craftsman City, EU 54000</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon"><i class="bi bi-envelope-fill"></i></div>
+                        <div>
+                            <p class="info-card-label">Email Us</p>
+                            <p class="info-card-value"><a href="mailto:pastarizwan@gmail.com">pastarizwan@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon"><i class="bi bi-telephone-fill"></i></div>
+                        <div>
+                            <p class="info-card-label">Call Us</p>
+                            <p class="info-card-value"><a href="tel:+923219295562">+92 (321) 929-5562</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon"><i class="bi bi-whatsapp"></i></div>
+                        <div>
+                            <p class="info-card-label">WhatsApp</p>
+                            <p class="info-card-value"><a href="https://wa.me/923219295562" target="_blank">Chat with Us</a></p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem; padding: 1.75rem; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.04);">
+                        <p class="info-card-label" style="margin-bottom: 0.5rem;">Business Hours</p>
+                        <table class="hours-table">
+                            <tr>
+                                <td>Monday – Friday</td>
+                                <td>9:00 AM – 6:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td>10:00 AM – 4:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td>Closed</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                  
+                </div>
+
+                <!-- RIGHT: Contact Form -->
+                <div class="col-lg-8 col-md-12 ps-lg-5">
+                    <div class="contact-form-card">
+
+                        <p class="form-section-sub">Send Us a Message</p>
+                        <h3 class="form-section-title">Tell Us About<br>Your Project</h3>
+                        <div class="gold-rule"></div>
+
+                        <form id="contactForm" action="contact.php" method="POST" novalidate>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="field-wrap">
+                                        <label for="name" class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" id="name" name="name"
+                                            placeholder="e.g. Ahmed Khan" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="field-wrap">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="email" name="email"
+                                            placeholder="e.g. ahmed@example.com" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="field-wrap">
+                                        <label for="phone" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone"
+                                            placeholder="e.g. +92 300 0000000">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="field-wrap">
+                                        <label for="inquiry_type" class="form-label">Enquiry Type</label>
+                                        <select class="form-select" id="inquiry_type" name="inquiry_type" required>
+                                            <option value="" disabled selected>Select an option…</option>
+                                            <optgroup label="Products">
+                                                <option value="Custom Door Design">Custom Door Design</option>
+                                                <option value="Panel Doors">Panel Doors</option>
+                                                <option value="Hydraulic Flush Doors">Hydraulic Flush Doors</option>
+                                                <option value="Hydraulic Skin Doors">Hydraulic Skin Doors</option>
+                                                <option value="Engineering / Pasting Doors">Engineering / Pasting Doors</option>
+                                                <option value="Window Frames & Shutters">Window Frames &amp; Shutters</option>
+                                                <option value="Moulding & Railing">Moulding &amp; Railing</option>
+                                            </optgroup>
+                                            <optgroup label="Interiors">
+                                                <option value="Kitchen Units">Kitchen Units</option>
+                                                <option value="Wardrobes & Custom Furniture">Wardrobes &amp; Custom Furniture</option>
+                                            </optgroup>
+                                            <optgroup label="Materials (Bulk)">
+                                                <option value="Shuttering Plywood">Shuttering Plywood</option>
+                                                <option value="Seasoned Wood Planks">Seasoned Wood Planks</option>
+                                            </optgroup>
+                                            <optgroup label="Services">
+                                                <option value="Design Consultation">Design Consultation</option>
+                                                <option value="Site Visit & Measurement">Site Visit &amp; Measurement</option>
+                                                <option value="Installation & Fitting">Installation &amp; Fitting</option>
+                                                <option value="After-Sales & Maintenance">After-Sales &amp; Maintenance</option>
+                                                <option value="Commercial / Bulk Project">Commercial / Bulk Project</option>
+                                                <option value="General Inquiry">General Inquiry</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field-wrap">
+                                <label for="project_details" class="form-label">Project Details</label>
+                                <textarea class="form-control" id="project_details" name="message" rows="6"
+                                    placeholder="Tell us about your project — dimensions, style preferences, timeline, budget range…" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-contact-submit" id="submitBtn">
+                                Send Message <i class="bi bi-arrow-right-circle"></i>
+                            </button>
+
+                            <p class="privacy-note">
+                                <i class="bi bi-lock-fill"></i> Your information is secure and will never be shared with third parties.
+                            </p>
+
+                        </form>
+
+                        <!-- Success message shown after JS sends the form -->
+                        <div class="form-success-msg" id="successMsg">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <h4 style="font-family: 'Playfair Display', serif; color: #342a26; margin-bottom: 0.5rem;">Message Sent!</h4>
+                            <p style="font-family: 'Inter', sans-serif; color: rgba(52,42,38,0.65);">Thank you for reaching out. Our team will get back to you within 24 hours.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-brand">European Doors</h5>
+                    <p class="small text-uppercase tracking-wider mb-2"
+                        style="color: #b49b69; font-weight: 700; font-size: 0.75rem; letter-spacing: 1px;">
+                        A specialized branch of The Wood Company
+                    </p>
+                    <p class="footer-desc">
+                        Since 2001, we have been blending traditional craftsmanship with modern sustainability. As a
+                        premier division of <strong>The Wood Company</strong>, we create entrances that define
+                        architecture and elevate living spaces.
+                    </p>
+                    <div class="social-links mt-4">
+                        <a href="https://www.facebook.com/share/1CSL6rNeu1/" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-heading">Company</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Our Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-heading">Services</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="collection.html">Custom Doors</a></li>
+                        <li><a href="collection.html">Window Frames</a></li>
+                        <li><a href="contact.html">Design Consultation</a></li>
+                        <li><a href="contact.html">Restoration</a></li>
+                        <li><a href="contact.html">Commercial Projects</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-heading">Contact Us</h6>
+                    <ul class="list-unstyled footer-contact">
+                        <li>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Shop#1 Ramzu Plaza,<br>Old Haji Camp,Karachi Pakistan</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-envelope-fill"></i>
+                            <a href="mailto:pastarizwan@gmail.com">pastarizwan@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-telephone-fill"></i>
+                            <a href="tel:+923219295562">+92 (321) 929-5562</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="row align-items-center copyright-section">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2001 - 2025 <strong>The Wood Company</strong>. European Doors is a registered
+                        trademark.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="legal-link">Privacy Policy</a>
+                    <span class="mx-2">•</span>
+                    <a href="#" class="legal-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+    <script>
+        /* ---- Navbar scroll effect (same as main site) ---- */
+        const navbar = document.querySelector('.heritage-navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('navbar-scrolled', window.scrollY > 50);
+        });
+
+        /* ---- Form submit with loading state ---- */
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+
+        form.addEventListener('submit', function (e) {
+            if (!form.checkValidity()) {
+                e.preventDefault();
+                form.classList.add('was-validated');
+                return;
+            }
+            submitBtn.innerHTML = 'Sending… <i class="bi bi-hourglass-split"></i>';
+            submitBtn.disabled = true;
+        });
+    </script>
+</body>
+
+</html>
